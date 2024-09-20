@@ -32,7 +32,6 @@ class WebView extends StatefulWidget {
   State<WebView> createState() => _WebViewState();
 }
 
-
 //web display
 class _WebViewState extends State<WebView> {
   @override
@@ -41,7 +40,6 @@ class _WebViewState extends State<WebView> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 50),
       width: size.width,
-     
       child: Wrap(
         alignment: WrapAlignment.spaceBetween,
         crossAxisAlignment: WrapCrossAlignment.center,
@@ -157,60 +155,8 @@ class _MobileViewState extends State<MobileView> {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    // Container(
-                    //   height: 300,
-                    //   child: const Column(
-                    //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //     children: [
-                    //       SizedBox(
-                    //         height: 100,
-                    //       ),
-                    //       Text(
-                    //         "Sample Description",
-                    //         style: TextStyle(fontSize: 40),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
                   ],
                 ),
-                // InkWell(
-                //   onTap: () {
-                //     //proper redirection syntax
-                //     context.go("/what-we-do");
-                //   },
-                //   child: Container(
-                //     width: 300,
-                //     height: 400,
-                //     padding: const EdgeInsets.all(8),
-                //     decoration: BoxDecoration(
-                //       border: Border.all(width: 0.5, color: Colors.black),
-                //     ),
-                //     child: Column(
-                //       mainAxisAlignment: MainAxisAlignment.start,
-                //       crossAxisAlignment: CrossAxisAlignment.start,
-                //       children: [
-                //         SizedBox(
-                //           height: 200,
-                //           child: Image.asset(
-                //             "assets/welead.png",
-                //             fit: BoxFit.fill,
-                //           ),
-                //         ),
-                //         const Gap(20),
-                //         const Text(
-                //           "Sample",
-                //           style: TextStyle(fontSize: 30),
-                //         ),
-                //         const Gap(20),
-                //         const Text(
-                //           "Sample",
-                //           style: TextStyle(fontSize: 15),
-                //         ),
-                //       ],
-                //     ),
-                //   ),
-                // )
               ],
             ),
           )
