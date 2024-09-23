@@ -127,10 +127,10 @@ class _AppBarState extends State<AppBar> {
                       ),
                       PopupMenuButton<String>(
                         child: const Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                          padding: EdgeInsets.symmetric(horizontal: 16.0),
                           child: Text(
                             'What We Do',
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                               color: Color.fromARGB(255, 255, 255, 255),
@@ -140,33 +140,28 @@ class _AppBarState extends State<AppBar> {
                         onSelected: (value) {
                           // Handle navigation based on the selection
                           switch (value) {
-                            case 'Products':
-                              context.go('/our-blog');
-                              break;
-                            case 'Services':
-                              Navigator.of(context).pushNamed('/services');
-                              break;
                             case 'Power':
-                              Navigator.of(context).pushNamed('/power');
+                              context.go('/power');
                               break;
                             case 'Water':
-                              Navigator.of(context).pushNamed('/water');
+                              context.go('/water');
                               break;
                             case 'Energy':
-                              Navigator.of(context).pushNamed('/energy');
+                              context.go('/energy');
+                              break;
+                            case 'Ecommerce':
+                              context.go('/ecommerce');
+                              break;
+                            case 'Sourcing':
+                              context.go('/sourcing');
+                              break;
+                            case 'Software':
+                              context.go('/software');
                               break;
                           }
                         },
                         itemBuilder: (BuildContext context) {
                           return [
-                            const PopupMenuItem<String>(
-                              value: 'Products',
-                              child: Text('Products'),
-                            ),
-                            const PopupMenuItem<String>(
-                              value: 'Services',
-                              child: Text('Services'),
-                            ),
                             const PopupMenuItem<String>(
                               value: 'Power',
                               child: Text('Power'),
@@ -178,6 +173,18 @@ class _AppBarState extends State<AppBar> {
                             const PopupMenuItem<String>(
                               value: 'Energy',
                               child: Text('Energy'),
+                            ),
+                            const PopupMenuItem<String>(
+                              value: 'Ecommerce',
+                              child: Text('E-commerce'),
+                            ),
+                            const PopupMenuItem<String>(
+                              value: 'Sourcing',
+                              child: Text('Sourcing'),
+                            ),
+                            const PopupMenuItem<String>(
+                              value: 'Software',
+                              child: Text('Software development'),
                             ),
                           ];
                         },

@@ -1345,6 +1345,7 @@ class _MobileViewState extends State<MobileView> {
                                 ,
                                 style: TextStyle(
                                     color: Colors.black, fontSize: 16),
+                                    textAlign: TextAlign.justify,
                               ),
                             ],
                           ),

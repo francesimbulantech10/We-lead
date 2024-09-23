@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           routerDelegate: router.routerDelegate,
           routeInformationParser: router.routeInformationParser,
           routeInformationProvider: router.routeInformationProvider,
-          title: 'Sample Template',
+          title: 'We Lead',
         );
       }),
     );

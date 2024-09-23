@@ -1,21 +1,21 @@
+import 'package:first_web/presentation/What-we-do/water/water-section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+
 import 'package:gap/gap.dart';
 
-import 'package:first_web/widgets/footer.dart';
-import 'what_we_do_section.dart';
+import '../../../widgets/appbar.dart';
+import '../../../widgets/drawer.dart';
+import '../../../widgets/footer.dart';
 
-import '../../widgets/appbar.dart';
-import '../../widgets/drawer.dart';
-
-class WhatwedoScreen extends StatefulWidget {
-  const WhatwedoScreen({super.key});
+class Waterscreen extends StatefulWidget {
+  const Waterscreen({super.key});
 
   @override
-  State<WhatwedoScreen> createState() => _WhatwedoScreen();
+  State<Waterscreen> createState() => _Waterscreen();
 }
 
-class _WhatwedoScreen extends State<WhatwedoScreen> {
+class _Waterscreen extends State<Waterscreen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();
@@ -72,9 +72,9 @@ class _WhatwedoScreen extends State<WhatwedoScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(150),
-                  WhatWeDoSection(),
-                  Gap(150),
+                  Gap(100),
+                  Watersection(),
+                  Gap(200),
                   FooterSection(),
                 ],
               ),

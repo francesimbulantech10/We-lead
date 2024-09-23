@@ -58,6 +58,14 @@ class _WebViewState extends State<WebView> {
     "10 KW off grid solar system is implemented in Pampanga, Philippines in 2015.",
   ];
 
+  List<String> link = [
+    "/watthour",
+    "/empower",
+    "/unlocking",
+    "/unleashing",
+    "/solar",
+  ];
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
@@ -135,30 +143,14 @@ class _WebViewState extends State<WebView> {
                               ),
                               const Gap(20),
                               ButtonWidget(
-                                title: 'title',
+                                title: 'See more',
                                 action: () {
-                                 
-                                    String route;
-                                    if (desc.isEmpty == 0) {
-                                      route = '/';
-                                    } else if (desc.isEmpty == 1) {
-                                      route = '/what-we-do';
-                                    } else if (desc.isEmpty == 2) {
-                                      route = '/about-us';
-                                    } else if (desc.isEmpty == 3) {
-                                      route = '/our-blog';
-                                    } else if (desc.isEmpty == 4) {
-                                      route = '/what-we-do';
-                                    } else {
-                                      route = '/';
-                                    }
-                                    context.go(route);
-                                  
+                                  context.go(link[index]);
+                                  //  context.go("/empower");
                                 },
                                 bgColor: Colors.blue,
                               ),
                               // Column(
-                         
                             ],
                           ),
                         ),

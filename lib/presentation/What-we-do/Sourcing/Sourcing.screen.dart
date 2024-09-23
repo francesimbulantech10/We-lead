@@ -1,21 +1,22 @@
+
+import 'package:first_web/presentation/What-we-do/Sourcing/Sourcing.section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+
 import 'package:gap/gap.dart';
 
-import 'package:first_web/widgets/footer.dart';
-import 'what_we_do_section.dart';
+import '../../../widgets/appbar.dart';
+import '../../../widgets/drawer.dart';
+import '../../../widgets/footer.dart';
 
-import '../../widgets/appbar.dart';
-import '../../widgets/drawer.dart';
-
-class WhatwedoScreen extends StatefulWidget {
-  const WhatwedoScreen({super.key});
+class Sourcingscreen extends StatefulWidget {
+  const Sourcingscreen({super.key});
 
   @override
-  State<WhatwedoScreen> createState() => _WhatwedoScreen();
+  State<Sourcingscreen> createState() => _Sourcingscreen();
 }
 
-class _WhatwedoScreen extends State<WhatwedoScreen> {
+class _Sourcingscreen extends State<Sourcingscreen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();
@@ -72,9 +73,9 @@ class _WhatwedoScreen extends State<WhatwedoScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(150),
-                  WhatWeDoSection(),
-                  Gap(150),
+                  Gap(30),
+                  Sourcingcesection(),
+                  Gap(200),
                   FooterSection(),
                 ],
               ),

@@ -1,21 +1,24 @@
+import 'package:first_web/presentation/What-we-do/Energy/energy-section.dart';
+import 'package:first_web/presentation/about_us/about_us_screen.dart';
+import 'package:first_web/widgets/appbar.dart';
+import 'package:first_web/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 
 import 'package:first_web/widgets/footer.dart';
-import 'what_we_do_section.dart';
 
-import '../../widgets/appbar.dart';
-import '../../widgets/drawer.dart';
 
-class WhatwedoScreen extends StatefulWidget {
-  const WhatwedoScreen({super.key});
+
+class Energyscreen extends StatefulWidget {
+  const Energyscreen({super.key});
 
   @override
-  State<WhatwedoScreen> createState() => _WhatwedoScreen();
+  State<Energyscreen> createState() => _Energyscreen();
 }
 
-class _WhatwedoScreen extends State<WhatwedoScreen> {
+class _Energyscreen extends State<Energyscreen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();
@@ -72,9 +75,9 @@ class _WhatwedoScreen extends State<WhatwedoScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(150),
-                  WhatWeDoSection(),
-                  Gap(150),
+                   Gap(40),
+                  Energysection(),
+                  Gap(200),
                   FooterSection(),
                 ],
               ),
