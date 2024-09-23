@@ -8,13 +8,13 @@ import 'package:first_web/widgets/footer.dart';
 import '../../widgets/appbar.dart';
 import '../../widgets/drawer.dart';
 
-class ContactUsScreen extends StatefulWidget {
-  const ContactUsScreen({super.key});
+class OurBlogscreen extends StatefulWidget {
+  const OurBlogscreen({super.key});
   @override
-  State<ContactUsScreen> createState() => _ContactUsScreenState();
+  State<OurBlogscreen> createState() => _OurBlogscreen();
 }
 
-class _ContactUsScreenState extends State<ContactUsScreen> {
+class _OurBlogscreen extends State<OurBlogscreen> {
   late final ScrollController scrollController;
 
   @override

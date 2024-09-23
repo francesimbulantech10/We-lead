@@ -4,6 +4,7 @@ class ButtonWidget extends StatelessWidget {
   final String title;
   final VoidCallback action;
   final Color bgColor;
+  
   const ButtonWidget({
     super.key,
     required this.title,
@@ -17,18 +18,22 @@ class ButtonWidget extends StatelessWidget {
       hoverColor: Colors.blue,
       onTap: action,
       child: Container(
-        width: 200,
-        padding: const EdgeInsets.all(20),
+        width: 150,
+        padding: const EdgeInsets.all(5),
         decoration: BoxDecoration(
+          color: bgColor, // Apply the background color here
           border: Border.all(
             width: 0.5,
             color: bgColor,
           ),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(1),
         ),
         child: Text(
           title,
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.white, // Optional: to improve contrast with bgColor
+          ),
           textAlign: TextAlign.center,
         ),
       ),

@@ -9,6 +9,7 @@ class AutoSizeInterText extends StatelessWidget {
   final int? maxLines;
   final TextAlign? align;
   final FontStyle? fontStyle;
+
   const AutoSizeInterText(
       {super.key,
       required this.text,
