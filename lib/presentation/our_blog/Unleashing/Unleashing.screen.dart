@@ -1,7 +1,5 @@
+import 'package:first_web/presentation/our_blog/Unleashing/Unleashing.section.dart';
 
-
-import 'package:first_web/presentation/our_blog/Watthour/Watthour.section.dart';
-import 'package:first_web/presentation/our_blog/Unlocking/Unlocking.section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
@@ -76,7 +74,7 @@ class _Unleashingscreen extends State<Unleashingscreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Gap(30),
-                  Unlockingsection(),
+                  Unleashingsection(),
                   Gap(200),
                   FooterSection(),
                 ],

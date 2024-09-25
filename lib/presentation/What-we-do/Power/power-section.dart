@@ -49,6 +49,14 @@ class _WebViewState extends State<WebView> {
     "Distribution Fuse cutout",
     "METER SOCKETS",
   ];
+  List<String> link = [
+    "/hourmeter",
+    "/transformer",
+    "/wedge-connector",
+    "/fuse",
+    "/meter-socket",
+  ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -77,14 +85,14 @@ class _WebViewState extends State<WebView> {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Gap(50),
+                   const  Gap(50),
                     SizedBox(
                       width: 150,
                       child: Text(
                         title[index],
                       ),
                     ),
-                     Gap(50),
+                    const  Gap(50),
                     SizedBox(
                       width: 380,
                       child: Column(
@@ -95,19 +103,7 @@ class _WebViewState extends State<WebView> {
                           ButtonWidget(
                             title: 'See more',
                             action: () {
-                              String route;
-                              if (img.isEmpty == 0) {
-                                route = '/';
-                              } else if (img.isEmpty == 1) {
-                                route = '/what-we-do';
-                              } else if (img.isEmpty == 2) {
-                                route = '/about-us';
-                              } else if (img.isEmpty == 3) {
-                                route = '/our-blog';
-                              }  else {
-                                route = '/';
-                              }
-                              context.go(route);
+                             context.go(link[index]);
                             },
                             bgColor: Colors.blue,
                           ),

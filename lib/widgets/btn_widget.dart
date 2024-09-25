@@ -30,8 +30,8 @@ class ButtonWidget extends StatelessWidget {
         ),
         child: Text(
           title,
-          style: TextStyle(
-            fontSize: 20,
+          style: const TextStyle(
+            fontSize: 18,
             color: Colors.white, // Optional: to improve contrast with bgColor
           ),
           textAlign: TextAlign.center,

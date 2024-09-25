@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:gap/gap.dart';
 
-import '../../widgets/btn_widget.dart';
+
 
 class AboutUsScreen extends StatefulWidget {
   const AboutUsScreen({super.key});
@@ -109,11 +109,18 @@ class _WebViewState extends State<WebView> {
                         String text = entry.value;
 
                         return Container(
-                          padding: paddings[index], // Use individual padding for each item
-                          width:250, // Same width for all boxes to maintain consistent size
-                          alignment:Alignment.center, // Center the text in each box
-                          decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 2.0), // Border color and width
-                            borderRadius:BorderRadius.circular(4.0), // Rounded corners
+                          padding: paddings[
+                              index], // Use individual padding for each item
+                          width:
+                              250, // Same width for all boxes to maintain consistent size
+                          alignment:
+                              Alignment.center, // Center the text in each box
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                                color: Colors.black,
+                                width: 2.0), // Border color and width
+                            borderRadius:
+                                BorderRadius.circular(4.0), // Rounded corners
                           ),
                           margin: const EdgeInsets.symmetric(
                               horizontal: 20), // Add spacing between elements
@@ -349,8 +356,7 @@ class _WebViewState extends State<WebView> {
                             alignment: WrapAlignment.spaceBetween,
                             crossAxisAlignment: WrapCrossAlignment.center,
                             spacing: 50,
-                            children:
-                                List.generate(corevalues.length, (index) {
+                            children: List.generate(corevalues.length, (index) {
                               return SizedBox(
                                 height: 500,
                                 child: Column(
@@ -360,11 +366,10 @@ class _WebViewState extends State<WebView> {
                                       style: const TextStyle(
                                           fontSize: 24,
                                           color: Colors.black,
-                                          fontWeight:
-                                              FontWeight.bold),
+                                          fontWeight: FontWeight.bold),
                                       textAlign: TextAlign.center,
                                     ),
-                                    Gap(50),
+                                    const Gap(50),
                                     SizedBox(
                                       width: 400,
                                       child: Text(
@@ -372,12 +377,10 @@ class _WebViewState extends State<WebView> {
                                         style: const TextStyle(
                                           fontSize: 16,
                                           color: Colors.black,
-                                          fontWeight:
-                                              FontWeight.bold,
+                                          fontWeight: FontWeight.bold,
                                         ),
                                         maxLines: 8,
-                                        textAlign:
-                                            TextAlign.justify,
+                                        textAlign: TextAlign.justify,
                                       ),
                                     )
                                   ],
@@ -482,11 +485,18 @@ class _MobileViewState extends State<MobileView> {
                         String text = entry.value;
 
                         return Container(
-                          padding: paddings[index], // Use individual padding for each item
-                          width:250, // Same width for all boxes to maintain consistent size
-                          alignment:Alignment.center, // Center the text in each box
-                          decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 2.0), // Border color and width
-                            borderRadius:BorderRadius.circular(4.0), // Rounded corners
+                          padding: paddings[
+                              index], // Use individual padding for each item
+                          width:
+                              250, // Same width for all boxes to maintain consistent size
+                          alignment:
+                              Alignment.center, // Center the text in each box
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                                color: Colors.black,
+                                width: 2.0), // Border color and width
+                            borderRadius:
+                                BorderRadius.circular(4.0), // Rounded corners
                           ),
                           margin: const EdgeInsets.symmetric(
                               horizontal: 20), // Add spacing between elements
@@ -746,7 +756,7 @@ class _MobileViewState extends State<MobileView> {
                                                           FontWeight.bold),
                                                   textAlign: TextAlign.center,
                                                 ),
-                                                Gap(50),
+                                                const Gap(50),
                                                 SizedBox(
                                                   width: 400,
                                                   child: Text(

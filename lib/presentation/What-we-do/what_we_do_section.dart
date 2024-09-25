@@ -44,7 +44,7 @@ class _WebViewState extends State<WebView> {
         alignment: WrapAlignment.spaceBetween,
         crossAxisAlignment: WrapCrossAlignment.center,
         children: [
-          Container(
+          SizedBox(
             height: 1000,
             width: size.width,
             child: Column(
@@ -88,7 +88,7 @@ class _MobileViewState extends State<MobileView> {
         alignment: WrapAlignment.spaceBetween,
         crossAxisAlignment: WrapCrossAlignment.center,
         children: [
-          Container(
+          SizedBox(
             height: 1000,
             width: size.width,
             child: Column(

@@ -102,6 +102,8 @@ class _MobileViewState extends State<MobileView> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
-    return SizedBox();
+    return SizedBox(
+      width: size.width,
+    );
   }
 }

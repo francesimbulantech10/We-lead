@@ -99,13 +99,11 @@ class _AppBarState extends State<AppBar> {
                 onTap: () {
                   context.go('/');
                 },
-                child: Container(
+                child: SizedBox(
                   child: SizedBox(
-                    child: SizedBox(
-                      width: 200,
-                      height: 200,
-                      child: Image.asset('welead.jpg'),
-                    ),
+                    width: 200,
+                    height: 200,
+                    child: Image.asset('welead.jpg'),
                   ),
                 ),
               ),
@@ -231,11 +229,11 @@ class AppBarMenu extends StatelessWidget {
   final TextStyle? textStyle; // Add a textStyle parameter
 
   const AppBarMenu({
-    Key? key,
+    super.key,
     required this.title,
     required this.action,
     this.textStyle, // Make the textStyle optional
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

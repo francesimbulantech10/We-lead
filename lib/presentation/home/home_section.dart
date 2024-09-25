@@ -18,11 +18,9 @@ class _HomeSectionState extends State<HomeSection> {
       builder: (context, constraints) {
         if (constraints.maxWidth > 1299) {
           return const WebView();
-        } else if (constraints.maxWidth > 500){
+        } else if (constraints.maxWidth > 500) {
           return const TabletView();
-        }
-        
-        else {
+        } else {
           return const MobileView();
         }
       },
@@ -38,22 +36,91 @@ class WebView extends StatefulWidget {
 }
 
 class _WebViewState extends State<WebView> with TickerProviderStateMixin {
-
-
-
   final List<String> imgList = [
     'Pamilya1.jpg',
     'Welead1.jpg',
     'Welead2.jpg',
+    "program.jpg"
+  ];
+  List<Map<String, String>> items = [
+    {
+      "image": "what-we-do/power1.jpg",
+      "title": "Power",
+      "description":
+          "Empowering the Electric Power Industry: Renewable Generation and Distribution Solutions.",
+    },
+    {
+      "image": "what-we-do/Water2.jpg",
+      "title": "Water",
+      "description":
+          "We provide water filtration systems and meters to ensure safe, clean water for drinking and specific purposes.",
+    },
+    {
+      "image": "what-we-do/energy2.jpg",
+      "title": "Energy",
+      "description":
+          "We offer clean energy solutions through solar and hydro power.",
+    },
+    {
+      "image": "what-we-do/sourcing1.jpg",
+      "title": "Sourcing",
+      "description":
+          "We provide excellent and safe options for sourcing helping you unlock the potential of your business.",
+    },
+    {
+      "image": "what-we-do/ecommerce.jpg",
+      "title": "E-Commerce",
+      "description":
+          "We give convenient and accessible B2B source for top quality local products of linking businesses to a wide range of Filipino goods and services through our platform, Pamilya.com.ph",
+    },
+    {
+      "image": "what-we-do/softdev.jpg",
+      "title": "Software Development",
+      "description":
+          "We specialize in software development for websites, applications, and POS systems, providing businesses with streamlined digital solutions.",
+    },
+  ];
+  List<String> links = [
+    "/power",
+    "/water",
+    "/energy",
+    "/sourcing",
+    "/ecommerce",
+    "/software",
   ];
 
- final List<String> meetClientsImg = [
+  List<String> ourblogslinks = [
+    "/watthour",
+    "/empower",
+    "//unlocking",
+    "/software",
+    "/unleashing",
+    "/solar",
+  ];
+  final List<String> Ourblogsimg = [
+    "our-blogs/Watthour.jpg",
+    "our-blogs/empowerment.jpg",
+    "our-blogs/unlockMarket.jpg",
+    "our-blogs/softdev.jpg",
+    "our-blogs/unleashing.jpg",
+    "our-blogs/solar.jpg",
+  ];
+
+  List<String> ourblogstitle = [
+    "Watthour Meter Implemented in North and Central Luzon",
+    "Empowerment Through Tourism: A Transformative Journey of Growth and Connection",
+    "Unlocking the Market Value of Filipino-Made Local Products for Export",
+    "Software Development",
+    "Unleashing Global Potential: We Lead, We Source with ANTS Sourcing",
+    "10KW off grid solar system in Pampanga, Philippines",
+  ];
+
+  final List<String> meetClientsImg = [
     "logos_homepage/apsc.jpg",
     "logos_homepage/jve.jpg",
     "logos_homepage/marriot.jpg",
     "logos_homepage/pelco2.jpg",
     "logos_homepage/meralcov2.jpg",
-   
   ];
   final List<String> meetClientsImg2 = [
     "logos_homepage/pelco2v2.jpg",
@@ -74,7 +141,6 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
         crossAxisAlignment: WrapCrossAlignment.center,
         children: [
           SizedBox(
-            
             width: size.width,
             child: Column(
               children: [
@@ -118,309 +184,99 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 60),
                 )),
                 const Gap(100),
-                Wrap(
-                  runSpacing: 60,
-                  spacing: 40, //width spacing for the containers
-
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        context.go(
-                            "/what-we-do"); //this is the navigation where i click it will direct to a page
-                      },
-                      child: Container(
-                        width: 300,
-                        height: 450,
-                        //padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(width: 0.5, color: Colors.black),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(
-                              height: 200,
-                              width: size.width,
-                              child: Image.asset(
-                                "what-we-do/power1.jpg",
-                                fit: BoxFit.fill,
+                SizedBox(
+                  width: 1000,
+                  child: Wrap(
+                    alignment: WrapAlignment.spaceBetween,
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    runSpacing: 40, // Vertical spacing between cards
+                    spacing: 20, // Horizontal spacing between cards
+                    children: items
+                        .asMap()
+                        .map((index, item) {
+                          return MapEntry(
+                            index,
+                            InkWell(
+                              onTap: () {
+                                // Use the links list for navigation
+                                context.go(links[index]);
+                              },
+                              child: Container(
+                                width: 300, // Fixed width of each card
+                                height: 450, // Fixed height of each card
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(
+                                      width: 0.5, color: Colors.grey.shade400),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 1,
+                                      blurRadius: 6,
+                                      offset:
+                                          Offset(0, 3), // Position of shadow
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    // Image section
+                                    SizedBox(
+                                      height: 200,
+                                      width: double.infinity, // Full width
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.vertical(
+                                            top: Radius.circular(
+                                                10)), // Rounded top corners
+                                        child: Image.asset(
+                                          item["image"]!,
+                                          fit: BoxFit
+                                              .cover, // Fill the space with the image
+                                        ),
+                                      ),
+                                    ),
+                                    const Gap(20),
+                                    // Title section
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10),
+                                      child: Text(
+                                        item["title"]!,
+                                        style: const TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors
+                                              .purple, // Purple title color
+                                        ),
+                                      ),
+                                    ),
+                                    const Gap(10),
+                                    // Description section
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10),
+                                      child: Text(
+                                        item["description"]!,
+                                        style: const TextStyle(
+                                          fontSize: 14,
+                                          color: Colors
+                                              .black87, // Regular black description
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                            const Gap(20),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 9.0), // Padding around the text
-                              child: Text(
-                                "Power",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Gap(20),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 9.0,
-                                  right: 20.0), // Padding around the text
-                              child: Text(
-                                "Empowering the Electric Power Industry: Renewable Generation and Distribution Solutions.",
-                                style: TextStyle(fontSize: 15),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        //context.go("/"); this is the navigation where i click it will direct to a page
-                      },
-                      child: Container(
-                        width: 300,
-                        height: 450,
-                        //padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(width: 0.5, color: Colors.black),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(
-                              height: 200,
-                              width: size.width,
-                              child: Image.asset(
-                                "what-we-do/Water2.jpg",
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                            const Gap(20),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 9.0), // Padding around the text
-                              child: Text(
-                                "Water",
-                                style: TextStyle(
-                                    fontWeight:
-                                        FontWeight.bold, // Font weight (bold)
-                                    fontSize: 20),
-                              ),
-                            ),
-                            const Gap(20),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 9.0,
-                                  right: 20.0), // Padding around the text
-                              child: Text(
-                                "We provide water filtration systems and meters to ensure safe, clean water for drinking and specific purposes.",
-                                style: TextStyle(fontSize: 15),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        //context.go("/"); this is the navigation where i click it will direct to a page
-                      },
-                      child: Container(
-                        width: 300,
-                        height: 450,
-                        //padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(width: 0.5, color: Colors.black),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(
-                              height: 200,
-                              width: size.width,
-                              child: Image.asset(
-                                "what-we-do/energy2.jpg",
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                            const Gap(20),
-                            //Title
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 9.0), // Padding around the text
-                              child: Text(
-                                "Energy",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Gap(20),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 9.0,
-                                  right: 20.0), // Padding around the text
-                              child: Text(
-                                "We offer clean energy solutions through solar and hydro power.",
-                                style: TextStyle(fontSize: 15),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
+                          );
+                        })
+                        .values
+                        .toList(),
+                  ),
                 ),
-                const Gap(50),
-                Wrap(
-                  runSpacing: 60,
-                  spacing: 40, //width spacing for the containers
-                  direction: Axis.horizontal, // Align
-
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        //context.go("/"); this is the navigation where i click it will direct to a page
-                      },
-                      child: Container(
-                        width: 300,
-                        height: 450,
-                        //padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(width: 0.5, color: Colors.black),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(
-                              height: 200,
-                              width: size.width,
-                              child: Image.asset(
-                                "what-we-do/sourcing1.jpg",
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                            const Gap(20),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 9.0), // Padding around the text
-                              child: Text(
-                                "Sourcing",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Gap(20),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 9.0,
-                                  right: 20.0), // Padding around the text
-                              child: Text(
-                                "We provide excellent and safe options for sourcing helping you unlock the potential of your business.",
-                                style: TextStyle(fontSize: 15),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        //context.go("/"); this is the navigation where i click it will direct to a page
-                      },
-                      child: Container(
-                        width: 300,
-                        height: 450,
-                        //padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(width: 0.5, color: Colors.black),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(
-                              height: 200,
-                              width: size.width,
-                              child: Image.asset(
-                                "what-we-do/ecommerce.jpg",
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                            const Gap(20),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 9.0), // Padding around the text
-                              child: Text(
-                                "E-Commerce",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Gap(20),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 9.0,
-                                  right: 20.0), // Padding around the text
-                              child: Text(
-                                "We give convenient and accessible B2B source for top quality local products of linking businesses to a wide range of Filipino goods and services through our platform, Pamilya.com.ph",
-                                style: TextStyle(fontSize: 15),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        //context.go("/"); this is the navigation where i click it will direct to a page
-                      },
-                      child: Container(
-                        width: 300,
-                        height: 450,
-                        //padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(width: 0.5, color: Colors.black),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(
-                              height: 200,
-                              width: size.width,
-                              child: Image.asset(
-                                "what-we-do/softdev.jpg",
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                            const Gap(20),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 9.0), // Padding around the text
-                              child: Text(
-                                "Software Development",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Gap(20),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 9.0,
-                                  right: 20.0), // Padding around the text
-                              child: Text(
-                                "We specialize in software development for websites, applications, and POS systems, providing businesses with streamlined digital solutions",
-                                style: TextStyle(fontSize: 15),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const Gap(100),
+                Gap(50),
                 const Center(
                   child: Text(
                     'Meet Our Clients',
@@ -588,286 +444,62 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 60),
                 )),
                 const Gap(50),
-                Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          child: InkWell(
-                            onTap: () {
-                              context.go(""); // Navigate to the specified page
-                            },
-                            child: Center(
-                              child: Container(
-                                width: 300,
-                                height: 290,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 0.5, color: Colors.black),
-                                ),
-                                child: Stack(
-                                  alignment: Alignment.center,
-                                  fit: StackFit
-                                      .expand, // Ensure the stack fills the container
-                                  children: [
-                                    Image.asset(
-                                      "our-blogs/Watthour.jpg",
-                                      fit: BoxFit.cover,
-                                      width: 300,
-                                      height: 350,
-                                      // Ensure the image covers the container
-                                    ),
-                                    const Gap(20),
-                                    const Padding(
-                                      padding: EdgeInsets.only(top: 150),
-                                      child: Column(
-                                        children: [
-                                          Text(
-                                            'Watthour Meter Implemented in North and Central Luzon',
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                                fontSize: 24,
-                                                color: Colors.white),
-                                            maxLines: 4,
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                SizedBox(
+                  width: 300,
+                  child: Wrap(
+                    spacing: 20, // Adjust spacing as needed
+                    runSpacing: 20,
+                    children: List.generate(ourblogslinks.length, (index) {
+                      return InkWell(
+                        onTap: () {
+                          context.go(ourblogslinks[index]);
+                        },
+                        child: Center(
+                          child: Container(
+                            width: 300,
+                            height: 290,
+                            decoration: BoxDecoration(
+                              border:
+                                  Border.all(width: 0.5, color: Colors.black),
                             ),
-                          ),
-                        ),
-                        const Gap(50),
-                        SizedBox(
-                          child: InkWell(
-                            onTap: () {
-                              context.go(""); // Navigate to the specified page
-                            },
-                            child: Center(
-                              child: Container(
-                                width: 300,
-                                height: 290,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 0.5, color: Colors.black),
+                            child: Stack(
+                              alignment: Alignment.center,
+                              fit: StackFit.expand,
+                              children: [
+                                Image.asset(
+                                  Ourblogsimg[index],
+                                  fit: BoxFit.cover,
+                                  width: 300,
+                                  height:
+                                      290, // Adjust height to match the container
                                 ),
-                                child: Stack(
-                                  fit: StackFit
-                                      .expand, // Ensure the stack fills the container
-                                  children: [
-                                    Image.asset(
-                                      "our-blogs/empowerment.jpg",
-                                      fit: BoxFit
-                                          .cover, // Ensure the image covers the container
-                                    ),
-                                    const Gap(40),
-                                    const Padding(
-                                      padding: EdgeInsets.only(top: 140),
-                                      child: Text(
-                                        'Empowerment Through Tourism: A Transformative Journey of Growth and Connection',
+                                const Gap(20),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 150),
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        ourblogstitle[index],
                                         textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 24, color: Colors.white),
+                                        style: const TextStyle(
+                                          fontSize: 24,
+                                          color: Colors.white,
+                                        ),
                                         maxLines: 4,
                                         overflow: TextOverflow.ellipsis,
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
                           ),
                         ),
-                        const Gap(50),
-                        SizedBox(
-                          child: InkWell(
-                            onTap: () {
-                              context.go(""); // Navigate to the specified page
-                            },
-                            child: Center(
-                              child: Container(
-                                width: 300,
-                                height: 290,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 0.5, color: Colors.black),
-                                ),
-                                child: Stack(
-                                  fit: StackFit
-                                      .expand, // Ensure the stack fills the container
-                                  children: [
-                                    Image.asset(
-                                      "our-blogs/unlockMarket.jpg",
-                                      fit: BoxFit
-                                          .cover, // Ensure the image covers the container
-                                    ),
-                                    const Gap(40),
-                                    const Padding(
-                                      padding: EdgeInsets.only(
-                                          top: 140, left: 10, right: 10),
-                                      child: Text(
-                                        'Unlocking the Market Value of Filipino-Made Local Products for Export',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 24, color: Colors.white),
-                                        maxLines: 4,
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const Gap(30),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          child: InkWell(
-                            onTap: () {
-                              context.go(""); // Navigate to the specified page
-                            },
-                            child: Center(
-                              child: Container(
-                                width: 300,
-                                height: 290,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 0.5, color: Colors.black),
-                                ),
-                                child: Stack(
-                                  alignment: Alignment.center,
-                                  fit: StackFit
-                                      .expand, // Ensure the stack fills the container
-                                  children: [
-                                    Image.asset(
-                                      "our-blogs/softdev.jpg",
-                                      fit: BoxFit.cover,
-                                      width: 300,
-                                      height: 350,
-                                      // Ensure the image covers the container
-                                    ),
-                                    const Gap(20),
-                                    const Padding(
-                                      padding: EdgeInsets.only(top: 190),
-                                      child: Column(
-                                        children: [
-                                          Text(
-                                            'Software Development',
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                                fontSize: 24,
-                                                color: Colors.white),
-                                            maxLines: 4,
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        const Gap(50),
-                        SizedBox(
-                          child: InkWell(
-                            onTap: () {
-                              context.go(""); // Navigate to the specified page
-                            },
-                            child: Center(
-                              child: Container(
-                                width: 300,
-                                height: 290,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 0.5, color: Colors.black),
-                                ),
-                                child: Stack(
-                                  fit: StackFit
-                                      .expand, // Ensure the stack fills the container
-                                  children: [
-                                    Image.asset(
-                                      "our-blogs/unleashing.jpg",
-                                      fit: BoxFit
-                                          .cover, // Ensure the image covers the container
-                                    ),
-                                    const Gap(40),
-                                    const Padding(
-                                      padding: EdgeInsets.only(
-                                          top: 150, left: 10, right: 10),
-                                      child: Text(
-                                        'Unleashing Global Potential: We Lead, We Source with ANTS Sourcing',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 24, color: Colors.white),
-                                        maxLines: 4,
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        const Gap(50),
-                        SizedBox(
-                          child: InkWell(
-                            onTap: () {
-                              context.go(""); // Navigate to the specified page
-                            },
-                            child: Center(
-                              child: Container(
-                                width: 300,
-                                height: 290,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 0.5, color: Colors.black),
-                                ),
-                                child: Stack(
-                                  fit: StackFit
-                                      .expand, // Ensure the stack fills the container
-                                  children: [
-                                    Image.asset(
-                                      "our-blogs/solar.jpg",
-                                      fit: BoxFit
-                                          .cover, // Ensure the image covers the container
-                                    ),
-                                    const Gap(40),
-                                    const Padding(
-                                      padding: EdgeInsets.only(
-                                          top: 140, left: 10, right: 10),
-                                      child: Text(
-                                        '10KW off grid solar system in Pampanga, Philippines',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 24, color: Colors.white),
-                                        maxLines: 4,
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                      );
+                    }),
+                  ),
                 ),
+                const Gap(50),
                 const Gap(60),
                 Column(
                   children: [
@@ -917,7 +549,6 @@ class _MobileViewState extends State<MobileView> {
     "logos_homepage/marriot.jpg",
     "logos_homepage/pelco2.jpg",
     "logos_homepage/meralcov2.jpg",
-   
   ];
   final List<String> meetClientsImg2 = [
     "logos_homepage/pelco2v2.jpg",
@@ -1341,11 +972,10 @@ class _MobileViewState extends State<MobileView> {
                                     fontWeight: FontWeight.bold, fontSize: 60),
                               ),
                               Text(
-                                'We Lead Comtech Inc. provides products and solutions for power,energy, water, and software applications to companies local and abroad.Our power products include power transformers, automatic voltage regulators,energy meters, and distribution transformers. Energy solutions are for providing renewable energy sources like Solar and Hydro. Water products cater to water treatment, water meters, etc. We also offer software solutions that can deliver efficient and personalized customer service and engagement. As a company, we seek to honor God through generating businesses and employment for our fellowmen in the Philippines and abroad. We strive for excellence in everything we do, and are committed to continuously improve our services according to the values and culture of the company based on our guiding principles: love for God, love for the country, and love for the people.'
-                                ,
+                                'We Lead Comtech Inc. provides products and solutions for power,energy, water, and software applications to companies local and abroad.Our power products include power transformers, automatic voltage regulators,energy meters, and distribution transformers. Energy solutions are for providing renewable energy sources like Solar and Hydro. Water products cater to water treatment, water meters, etc. We also offer software solutions that can deliver efficient and personalized customer service and engagement. As a company, we seek to honor God through generating businesses and employment for our fellowmen in the Philippines and abroad. We strive for excellence in everything we do, and are committed to continuously improve our services according to the values and culture of the company based on our guiding principles: love for God, love for the country, and love for the people.',
                                 style: TextStyle(
                                     color: Colors.black, fontSize: 16),
-                                    textAlign: TextAlign.justify,
+                                textAlign: TextAlign.justify,
                               ),
                             ],
                           ),
@@ -1363,7 +993,7 @@ class _MobileViewState extends State<MobileView> {
                         padding: const EdgeInsets.all(20),
                         //  width: size.width,
                         color: const Color.fromARGB(255, 0, 115, 255),
-                        child:const  Column(
+                        child: const Column(
                           children: [
                             Column(
                               children: [
@@ -1371,53 +1001,50 @@ class _MobileViewState extends State<MobileView> {
                                   '24',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Color.fromARGB(
-                                          255, 255, 255, 255),
+                                      color: Color.fromARGB(255, 255, 255, 255),
                                       fontSize: 50),
                                 ),
                                 Text('Industry Partners',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        color: Color.fromARGB(
-                                            255, 255, 255, 255),
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
                                         fontSize: 20)),
                               ],
                             ),
-                            Gap( 20),
+                            Gap(20),
                             Column(
                               children: [
                                 Text(
                                   '24',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Color.fromARGB(
-                                          255, 255, 255, 255),
+                                      color: Color.fromARGB(255, 255, 255, 255),
                                       fontSize: 50),
                                 ),
                                 Text('Years of Experience',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        color: Color.fromARGB(
-                                            255, 255, 255, 255),
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
                                         fontSize: 20)),
                               ],
                             ),
-                            Gap( 20),
+                            Gap(20),
                             Column(
                               children: [
                                 Text(
                                   '2,000',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Color.fromARGB(
-                                          255, 255, 255, 255),
+                                      color: Color.fromARGB(255, 255, 255, 255),
                                       fontSize: 50),
                                 ),
                                 Text('Satisfied Clients',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        color: Color.fromARGB(
-                                            255, 255, 255, 255),
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
                                         fontSize: 20)),
                               ],
                             ),
@@ -1740,15 +1367,12 @@ class _MobileViewState extends State<MobileView> {
   }
 }
 
-
-
 class TabletView extends StatefulWidget {
   const TabletView({super.key});
 
   @override
   State<TabletView> createState() => _TabletViewState();
 }
-
 
 class _TabletViewState extends State<TabletView> {
   final List<String> imgList = [
@@ -1763,7 +1387,6 @@ class _TabletViewState extends State<TabletView> {
     "logos_homepage/marriot.jpg",
     "logos_homepage/pelco2.jpg",
     "logos_homepage/meralcov2.jpg",
-   
   ];
   final List<String> meetClientsImg2 = [
     "logos_homepage/pelco2v2.jpg",
@@ -2187,8 +1810,7 @@ class _TabletViewState extends State<TabletView> {
                                     fontWeight: FontWeight.bold, fontSize: 60),
                               ),
                               Text(
-                                'We Lead Comtech Inc. provides products and solutions for power,energy, water, and software applications to companies local and abroad.Our power products include power transformers, automatic voltage regulators,energy meters, and distribution transformers. Energy solutions are for providing renewable energy sources like Solar and Hydro. Water products cater to water treatment, water meters, etc. We also offer software solutions that can deliver efficient and personalized customer service and engagement. As a company, we seek to honor God through generating businesses and employment for our fellowmen in the Philippines and abroad. We strive for excellence in everything we do, and are committed to continuously improve our services according to the values and culture of the company based on our guiding principles: love for God, love for the country, and love for the people.'
-                                ,
+                                'We Lead Comtech Inc. provides products and solutions for power,energy, water, and software applications to companies local and abroad.Our power products include power transformers, automatic voltage regulators,energy meters, and distribution transformers. Energy solutions are for providing renewable energy sources like Solar and Hydro. Water products cater to water treatment, water meters, etc. We also offer software solutions that can deliver efficient and personalized customer service and engagement. As a company, we seek to honor God through generating businesses and employment for our fellowmen in the Philippines and abroad. We strive for excellence in everything we do, and are committed to continuously improve our services according to the values and culture of the company based on our guiding principles: love for God, love for the country, and love for the people.',
                                 style: TextStyle(
                                     color: Colors.black, fontSize: 16),
                               ),
@@ -2208,7 +1830,7 @@ class _TabletViewState extends State<TabletView> {
                         padding: const EdgeInsets.all(20),
                         //  width: size.width,
                         color: const Color.fromARGB(255, 0, 115, 255),
-                        child:const  Column(
+                        child: const Column(
                           children: [
                             Column(
                               children: [
@@ -2216,53 +1838,50 @@ class _TabletViewState extends State<TabletView> {
                                   '24',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Color.fromARGB(
-                                          255, 255, 255, 255),
+                                      color: Color.fromARGB(255, 255, 255, 255),
                                       fontSize: 50),
                                 ),
                                 Text('Industry Partners',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        color: Color.fromARGB(
-                                            255, 255, 255, 255),
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
                                         fontSize: 20)),
                               ],
                             ),
-                            Gap( 20),
+                            Gap(20),
                             Column(
                               children: [
                                 Text(
                                   '24',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Color.fromARGB(
-                                          255, 255, 255, 255),
+                                      color: Color.fromARGB(255, 255, 255, 255),
                                       fontSize: 50),
                                 ),
                                 Text('Years of Experience',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        color: Color.fromARGB(
-                                            255, 255, 255, 255),
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
                                         fontSize: 20)),
                               ],
                             ),
-                            Gap( 20),
+                            Gap(20),
                             Column(
                               children: [
                                 Text(
                                   '2,000',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Color.fromARGB(
-                                          255, 255, 255, 255),
+                                      color: Color.fromARGB(255, 255, 255, 255),
                                       fontSize: 50),
                                 ),
                                 Text('Satisfied Clients',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        color: Color.fromARGB(
-                                            255, 255, 255, 255),
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
                                         fontSize: 20)),
                               ],
                             ),
