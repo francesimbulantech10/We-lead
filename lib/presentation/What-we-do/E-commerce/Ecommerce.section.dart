@@ -1,7 +1,7 @@
-import 'package:first_web/widgets/btn_widget.dart';
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:go_router/go_router.dart';
+
 
 class Ecommercesection extends StatefulWidget {
   const Ecommercesection({super.key});
@@ -71,8 +71,8 @@ class _WebViewState extends State<WebView> {
                 ],
               ),
             ),
-            Gap(20),
-              SizedBox(
+            const Gap(20),
+              const SizedBox(
                 child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -101,6 +101,8 @@ class _MobileViewState extends State<MobileView> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
-    return SizedBox();
+    return SizedBox(
+      width: size.width,
+    );
   }
 }

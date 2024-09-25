@@ -1,24 +1,23 @@
 
+import 'package:first_web/presentation/What-we-do/water/CLASS-C-R160-VANE/Class-c-R160-section.dart';
 
-import 'package:first_web/presentation/our_blog/Watthour/Watthour.section.dart';
-import 'package:first_web/presentation/our_blog/Unlocking/Unlocking.section.dart';
+
+import 'package:first_web/widgets/footer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-
 import 'package:gap/gap.dart';
+import '../../../../widgets/appbar.dart';
+import '../../../../widgets/drawer.dart';
 
-import '../../../widgets/appbar.dart';
-import '../../../widgets/drawer.dart';
-import '../../../widgets/footer.dart';
 
-class Unlockingscreen extends StatefulWidget {
-  const Unlockingscreen({super.key});
+class R160screen extends StatefulWidget {
+  const R160screen({super.key});
 
   @override
-  State<Unlockingscreen> createState() => _Unlockingscreen();
+  State<R160screen> createState() => _R160screen();
 }
 
-class _Unlockingscreen extends State<Unlockingscreen> {
+class _R160screen extends State<R160screen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();
@@ -75,9 +74,9 @@ class _Unlockingscreen extends State<Unlockingscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(30),
-                  Unlockingsection(),
-                  Gap(200),
+                 
+                  R160section(),
+                  Gap(20),
                   FooterSection(),
                 ],
               ),
@@ -88,3 +87,4 @@ class _Unlockingscreen extends State<Unlockingscreen> {
     );
   }
 }
+

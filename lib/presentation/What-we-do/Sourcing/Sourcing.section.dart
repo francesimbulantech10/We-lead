@@ -1,7 +1,7 @@
-import 'package:first_web/widgets/btn_widget.dart';
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:go_router/go_router.dart';
+
 
 class Sourcingcesection extends StatefulWidget {
   const Sourcingcesection({super.key});
@@ -102,6 +102,8 @@ class _MobileViewState extends State<MobileView> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
-    return SizedBox();
+    return SizedBox(
+      width: size.width,
+    );
   }
 }

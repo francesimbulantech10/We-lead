@@ -1,24 +1,24 @@
 
 
-import 'package:first_web/presentation/our_blog/Watthour/Watthour.section.dart';
-import 'package:first_web/presentation/our_blog/Unlocking/Unlocking.section.dart';
+import 'package:first_web/presentation/What-we-do/Power/Fuse-connector/Fuse-connector-section.dart';
+
+
+import 'package:first_web/widgets/footer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-
 import 'package:gap/gap.dart';
+import '../../../../widgets/appbar.dart';
+import '../../../../widgets/drawer.dart';
 
-import '../../../widgets/appbar.dart';
-import '../../../widgets/drawer.dart';
-import '../../../widgets/footer.dart';
 
-class Unlockingscreen extends StatefulWidget {
-  const Unlockingscreen({super.key});
+class Fusescreen extends StatefulWidget {
+  const Fusescreen({super.key});
 
   @override
-  State<Unlockingscreen> createState() => _Unlockingscreen();
+  State<Fusescreen> createState() => _Fusescreen();
 }
 
-class _Unlockingscreen extends State<Unlockingscreen> {
+class _Fusescreen extends State<Fusescreen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();
@@ -75,9 +75,9 @@ class _Unlockingscreen extends State<Unlockingscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(30),
-                  Unlockingsection(),
-                  Gap(200),
+                 
+                  Fusesection(),
+                  Gap(20),
                   FooterSection(),
                 ],
               ),

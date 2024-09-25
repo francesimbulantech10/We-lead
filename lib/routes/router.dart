@@ -1,11 +1,18 @@
 import 'package:first_web/presentation/What-we-do/E-commerce/Ecommerce-screen.dart';
 import 'package:first_web/presentation/What-we-do/Energy/energy-screen.dart';
+import 'package:first_web/presentation/What-we-do/Power/Fuse-connector/Fuse-connectors-screen.dart';
+import 'package:first_web/presentation/What-we-do/Power/Hour-meter/hour-meter-screen.dart';
+import 'package:first_web/presentation/What-we-do/Power/Locking-wedge-connector/Wedge-connector-screen.dart';
+import 'package:first_web/presentation/What-we-do/Power/Pole-Mounted-Transformer/Transformer-screen.dart';
+import 'package:first_web/presentation/What-we-do/Power/meter-socket/Meter-connector-screen.dart';
 import 'package:first_web/presentation/What-we-do/Power/power-screen.dart';
-
 import 'package:first_web/presentation/What-we-do/Software/software.screen.dart';
 import 'package:first_web/presentation/What-we-do/Sourcing/Sourcing.screen.dart';
+import 'package:first_web/presentation/What-we-do/water/CLASS-C-R160-VANE/Class-c-R160-screen.dart';
+import 'package:first_web/presentation/What-we-do/water/DRINKING-WATER-(LXH-8)/Water-LXH-8-screen.dart';
+import 'package:first_web/presentation/What-we-do/water/HORIZONTAL-WOLTMANN/Woltmann-screen.dart';
+import 'package:first_web/presentation/What-we-do/water/MULTI-JET%20VANE/Jet-vane-screen.dart';
 import 'package:first_web/presentation/What-we-do/water/water-screen.dart';
-
 import 'package:first_web/presentation/about_us/about_us_section.dart';
 import 'package:first_web/presentation/our_blog/Watthour/Watthour.screen.dart';
 import 'package:first_web/presentation/our_blog/Solarpower/Solarpower.screen.dart';
@@ -78,7 +85,7 @@ class WebRouter {
               child: const Waterscreen(),
             );
           }),
-           GoRoute(
+      GoRoute(
           path: '/energy',
           pageBuilder: (context, state) {
             return NoTransitionPage(
@@ -86,7 +93,7 @@ class WebRouter {
               child: const Energyscreen(),
             );
           }),
-          GoRoute(
+      GoRoute(
           path: '/ecommerce',
           pageBuilder: (context, state) {
             return NoTransitionPage(
@@ -94,7 +101,7 @@ class WebRouter {
               child: const Ecommercescreen(),
             );
           }),
-          GoRoute(
+      GoRoute(
           path: '/sourcing',
           pageBuilder: (context, state) {
             return NoTransitionPage(
@@ -102,22 +109,23 @@ class WebRouter {
               child: const Sourcingscreen(),
             );
           }),
-           GoRoute(
+      GoRoute(
           path: '/software',
           pageBuilder: (context, state) {
             return NoTransitionPage(
               key: state.pageKey,
               child: const Softwarescreen(),
             );
-          }),GoRoute(
+          }),
+      GoRoute(
           path: '/empower',
           pageBuilder: (context, state) {
             return NoTransitionPage(
               key: state.pageKey,
-              child: const Empowermentscreen(),
+              child: const EmpowermentScreen(),
             );
           }),
-          GoRoute(
+      GoRoute(
           path: '/solar',
           pageBuilder: (context, state) {
             return NoTransitionPage(
@@ -125,7 +133,7 @@ class WebRouter {
               child: const Solarscreen(),
             );
           }),
-          GoRoute(
+      GoRoute(
           path: '/unlocking',
           pageBuilder: (context, state) {
             return NoTransitionPage(
@@ -133,7 +141,7 @@ class WebRouter {
               child: const Unlockingscreen(),
             );
           }),
-             GoRoute(
+      GoRoute(
           path: '/unleashing',
           pageBuilder: (context, state) {
             return NoTransitionPage(
@@ -141,8 +149,8 @@ class WebRouter {
               child: const Unleashingscreen(),
             );
           }),
-          
-          GoRoute(
+
+      GoRoute(
           path: '/watthour',
           pageBuilder: (context, state) {
             return NoTransitionPage(
@@ -150,7 +158,80 @@ class WebRouter {
               child: const Watthourscreen(),
             );
           }),
-          
+
+      //Menu bar items
+      GoRoute(
+          path: '/hourmeter',
+          pageBuilder: (context, state) {
+            return NoTransitionPage(
+              key: state.pageKey,
+              child: const hourmeterscreen(),
+            );
+          }),
+      GoRoute(
+          path: '/transformer',
+          pageBuilder: (context, state) {
+            return NoTransitionPage(
+              key: state.pageKey,
+              child: const Transformerscreen(),
+            );
+          }),
+      GoRoute(
+          path: '/wedge-connector',
+          pageBuilder: (context, state) {
+            return NoTransitionPage(
+              key: state.pageKey,
+              child: const Wedgeconnectorscreen(),
+            );
+          }),
+      GoRoute(
+          path: '/fuse',
+          pageBuilder: (context, state) {
+            return NoTransitionPage(
+              key: state.pageKey,
+              child: const Fusescreen(),
+            );
+          }),
+      GoRoute(
+          path: '/meter-socket',
+          pageBuilder: (context, state) {
+            return NoTransitionPage(
+              key: state.pageKey,
+              child: const Meterscreen(),
+            );
+          }),
+      GoRoute(
+          path: '/r160-vane',
+          pageBuilder: (context, state) {
+            return NoTransitionPage(
+              key: state.pageKey,
+              child: const R160screen(),
+            );
+          }),
+      GoRoute(
+          path: '/water-lxh',
+          pageBuilder: (context, state) {
+            return NoTransitionPage(
+              key: state.pageKey,
+              child: const Waterlxhscreen(),
+            );
+          }),
+      GoRoute(
+          path: '/woltmann',
+          pageBuilder: (context, state) {
+            return NoTransitionPage(
+              key: state.pageKey,
+              child: const Woltmanscreen(),
+            );
+          }),
+      GoRoute(
+          path: '/jetvane',
+          pageBuilder: (context, state) {
+            return NoTransitionPage(
+              key: state.pageKey,
+              child: const Jetvanescreen(),
+            );
+          }),
     ],
   );
 }

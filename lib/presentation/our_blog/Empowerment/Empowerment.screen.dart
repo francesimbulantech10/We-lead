@@ -1,6 +1,7 @@
 
-import 'package:first_web/presentation/What-we-do/Sourcing/Sourcing.section.dart';
-import 'package:first_web/presentation/our_blog/Watthour/Watthour.section.dart';
+
+import 'package:first_web/presentation/our_blog/Empowerment/Empowerment.section.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
@@ -10,14 +11,14 @@ import '../../../widgets/appbar.dart';
 import '../../../widgets/drawer.dart';
 import '../../../widgets/footer.dart';
 
-class Watthourscreen extends StatefulWidget {
-  const Watthourscreen({super.key});
+class EmpowermentScreen extends StatefulWidget {
+  const EmpowermentScreen({super.key});
 
   @override
-  State<Watthourscreen> createState() => _Watthourscreen();
+  State<EmpowermentScreen> createState() => _EmpowermentScreenn();
 }
 
-class _Watthourscreen extends State<Watthourscreen> {
+class _EmpowermentScreenn extends State<EmpowermentScreen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();

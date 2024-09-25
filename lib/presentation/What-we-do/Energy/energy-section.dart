@@ -1,7 +1,7 @@
-import 'package:first_web/widgets/btn_widget.dart';
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:go_router/go_router.dart';
+
 
 class Energysection extends StatefulWidget {
   const Energysection({super.key});
