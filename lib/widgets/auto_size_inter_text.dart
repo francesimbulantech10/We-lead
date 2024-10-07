@@ -10,15 +10,16 @@ class AutoSizeInterText extends StatelessWidget {
   final TextAlign? align;
   final FontStyle? fontStyle;
 
-  const AutoSizeInterText(
-      {super.key,
-      required this.text,
-      this.fontSize,
-      this.color,
-      this.maxLines,
-      this.fw,
-      this.fontStyle,
-      this.align});
+  const AutoSizeInterText({
+    super.key,
+    required this.text,
+    this.fontSize,
+    this.color,
+    this.maxLines,
+    this.fw,
+    this.fontStyle,
+    this.align,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +28,9 @@ class AutoSizeInterText extends StatelessWidget {
       maxLines: maxLines ?? 1,
       textAlign: align ?? TextAlign.center,
       style: TextStyle(
-        fontSize: fontSize ?? 15,
-        color: const Color.fromARGB(255, 0, 0, 0),
-        fontWeight: fw ?? FontWeight.normal,
+        fontSize: fontSize ?? 70,
+        color: const Color.fromARGB(255, 255, 255, 255),
+        fontWeight: fw ?? FontWeight.bold,
         fontStyle: fontStyle,
       ),
     );

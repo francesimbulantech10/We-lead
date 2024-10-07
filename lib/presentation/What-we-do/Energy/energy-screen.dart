@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:first_web/presentation/What-we-do/Energy/energy-section.dart';
 
 import 'package:first_web/widgets/appbar.dart';
@@ -75,9 +77,9 @@ class _Energyscreen extends State<Energyscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                   Gap(40),
+                   
                   Energysection(),
-                  Gap(200),
+                  Gap(50),
                   FooterSection(),
                 ],
               ),

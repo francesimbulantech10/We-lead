@@ -75,7 +75,7 @@ class _AboutUsSection extends State<AboutUsSection> {
                 children: [
                   
                   AboutUsScreen(),
-                  Gap(200),
+                  Gap(50),
                   FooterSection(),
                 ],
               ),

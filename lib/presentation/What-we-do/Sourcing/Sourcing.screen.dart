@@ -1,4 +1,3 @@
-
 import 'package:first_web/presentation/What-we-do/Sourcing/Sourcing.section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -73,7 +72,6 @@ class _Sourcingscreen extends State<Sourcingscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(30),
                   Sourcingcesection(),
                   Gap(200),
                   FooterSection(),

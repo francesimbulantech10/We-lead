@@ -20,6 +20,7 @@ import 'package:first_web/presentation/our_blog/Unleashing/Unleashing.screen.dar
 import 'package:first_web/presentation/our_blog/Unlocking/Unlocking.screen.dart';
 import 'package:first_web/presentation/our_blog/Empowerment/Empowerment.screen.dart';
 import 'package:first_web/presentation/our_blog/our_blog.dart';
+import 'package:first_web/presentation/our_blog/software/softwareblogscreen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:first_web/presentation/home/home_screen.dart';
 import 'package:first_web/presentation/What-we-do/what_we_do.dart';
@@ -115,6 +116,14 @@ class WebRouter {
             return NoTransitionPage(
               key: state.pageKey,
               child: const Softwarescreen(),
+            );
+          }),
+      GoRoute(
+          path: '/softwareblog',
+          pageBuilder: (context, state) {
+            return NoTransitionPage(
+              key: state.pageKey,
+              child: const softwareblogscreen(),
             );
           }),
       GoRoute(

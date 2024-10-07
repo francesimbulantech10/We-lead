@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:first_web/widgets/auto_size_inter_text.dart';
 
 class AppBarDrawer extends StatefulWidget {
+  // ignore: use_super_parameters
   const AppBarDrawer({
     Key? key,
   }) : super(key: key);
@@ -17,84 +18,155 @@ class _AppBarDrawerState extends State<AppBarDrawer> {
     "Services",
     "Contact Us",
     "About Us",
-    
   ];
 
   String activePage = "Home";
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color.fromARGB(0, 255, 255, 255),
-      width: 250,
-      child: Drawer(
-        child: SafeArea(
-          right: false,
-          child: ListView(
-            padding: EdgeInsets.zero,
-            controller: ScrollController(),
-            children: [
-              Container(
-                padding: const EdgeInsets.all(15),
-              child: Image.asset('welead.png'),
+  @override
+Widget build(BuildContext context) {
+  return Container(
+    color: const Color.fromARGB(0, 255, 255, 255),
+    width: 200,
+    child: Drawer(
+      child: SafeArea(
+        right: true,
+        child: ListView(
+          padding: EdgeInsets.zero,
+          controller: ScrollController(),
+          children: [
+            Container(
+              color: const Color(0xFF003B56),
+              padding: const EdgeInsets.all(15),
+              child: const Text(
+                'We Lead',
+                style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+                textAlign: TextAlign.center,
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              AppBarMenus(
-                title: "Home",
-                action: () {
-                  context.go('/');
-                },
-                isActive: activePage == "Home",
-              ),
-              AppBarMenus(
-                title: "What we Do",
-                action: () {
-                  context.go('/what-we-do');
-                },
-                isActive: activePage == "What we Do",
-              ),
-             AppBarMenus(
-                title: "Our Blog",
-                action: () {
-                  context.go('/our-blog');
-                },
-                isActive: activePage == "Our Blog",
-              ),
-              AppBarMenus(
-                title: "About us",
-                action: () {
-                  context.go('/about-us');
-                },
-                isActive: activePage == "About us",
-              ),
-            ],
-          ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            AppBarMenus(
+              title: "Home",
+              action: () {
+                context.go('/');
+              },
+              isActive: activePage == "Home",
+              fontWeight: FontWeight.bold, // Make Home bold
+            ),
+            const Text(
+              'What we do',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            AppBarMenus(
+              title: "Power",
+              action: () {
+                context.go('/power');
+              },
+              isActive: activePage == "Power",
+              fontWeight: FontWeight.normal, // Make Power normal
+            ),
+            AppBarMenus(
+              title: "Water",
+              action: () {
+                context.go('/water');
+              },
+              isActive: activePage == "Water",
+              fontWeight: FontWeight.normal, // Make Water normal
+            ),
+            AppBarMenus(
+              title: "Energy",
+              action: () {
+                context.go('/energy');
+              },
+              isActive: activePage == "Energy",
+              fontWeight: FontWeight.normal, // Make Energy normal
+            ),
+            AppBarMenus(
+              title: "Ecommerce",
+              action: () {
+                context.go('/ecommerce');
+              },
+              isActive: activePage == "Ecommerce",
+              fontWeight: FontWeight.normal, // Make Ecommerce normal
+            ),
+            AppBarMenus(
+              title: "Sourcing",
+              action: () {
+                context.go('/sourcing');
+              },
+              isActive: activePage == "Sourcing",
+              fontWeight: FontWeight.normal, // Make Sourcing normal
+            ),
+            AppBarMenus(
+              title: "Software",
+              action: () {
+                context.go('/software');
+              },
+              isActive: activePage == "Software",
+              fontWeight: FontWeight.normal, // Make Software normal
+            ),
+            AppBarMenus(
+              title: "Our Blog",
+              action: () {
+                context.go('/our-blog');
+              },
+              isActive: activePage == "Our Blog",
+              fontWeight: FontWeight.bold, // Make Our Blog normal
+            ),
+            AppBarMenus(
+              title: "About us",
+              action: () {
+                context.go('/about-us');
+              },
+              isActive: activePage == "About us",
+              fontWeight: FontWeight.bold, // Make About Us normal
+            ),
+          ],
         ),
       ),
+    ),
     );
   }
 }
+
+
 
 class AppBarMenus extends StatelessWidget {
   final String title;
   final VoidCallback action;
   final bool isActive;
+  final FontWeight fontWeight; // New parameter for font weight
+
+  // ignore: use_super_parameters
   const AppBarMenus({
-    super.key,
+    Key? key,
     required this.title,
     required this.action,
     this.isActive = false,
-  });
+    this.fontWeight = FontWeight.normal, // Default to normal
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // var size = MediaQuery.of(context).size;
     return ListTile(
-      title: AutoSizeInterText(
-        text: title,
-        fw: isActive ? FontWeight.bold : FontWeight.normal,
+      contentPadding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0), // Adjust vertical padding for alignment
+      title: Container(
+        alignment: Alignment.center, // Aligns text to the left
+        child: AutoSizeInterText(
+          text: title,
+          fw: fontWeight, // Use the font weight parameter
+       
+            fontSize: 16.0, // Adjust font size as needed
+            color: isActive ? Colors.blue : Colors.black, // Change color based on isActive
+             // Adjust letter spacing if desired
+          
+        ),
       ),
       onTap: () {
         action();
@@ -102,3 +174,6 @@ class AppBarMenus extends StatelessWidget {
     );
   }
 }
+
+
+

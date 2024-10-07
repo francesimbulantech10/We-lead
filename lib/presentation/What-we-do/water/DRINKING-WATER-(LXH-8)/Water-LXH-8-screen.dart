@@ -1,7 +1,4 @@
-
-
 import 'package:first_web/presentation/What-we-do/water/DRINKING-WATER-(LXH-8)/Water-LXH-8-section.dart';
-
 
 import 'package:first_web/widgets/footer.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +6,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:gap/gap.dart';
 import '../../../../widgets/appbar.dart';
 import '../../../../widgets/drawer.dart';
-
 
 class Waterlxhscreen extends StatefulWidget {
   const Waterlxhscreen({super.key});
@@ -75,9 +71,9 @@ class _Waterlxhscreen extends State<Waterlxhscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                 
+                
                   Waterlxhsection(),
-                  Gap(20),
+                  Gap(150),
                   FooterSection(),
                 ],
               ),
@@ -88,4 +84,3 @@ class _Waterlxhscreen extends State<Waterlxhscreen> {
     );
   }
 }
-

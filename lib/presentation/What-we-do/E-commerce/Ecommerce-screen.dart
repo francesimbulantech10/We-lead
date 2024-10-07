@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:first_web/presentation/What-we-do/E-commerce/Ecommerce.section.dart';
 
 import 'package:first_web/widgets/appbar.dart';
@@ -8,8 +9,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:gap/gap.dart';
 
 import 'package:first_web/widgets/footer.dart';
-
-
 
 class Ecommercescreen extends StatefulWidget {
   const Ecommercescreen({super.key});
@@ -75,9 +74,9 @@ class _Ecommercescreen extends State<Ecommercescreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                   Gap(40),
+                  Gap(10),
                   Ecommercesection(),
-                  Gap(200),
+                  Gap(150),
                   FooterSection(),
                 ],
               ),

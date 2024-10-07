@@ -1,5 +1,3 @@
-
-
 import 'package:first_web/presentation/What-we-do/Power/Locking-wedge-connector/Wedge-connector-section.dart';
 
 import 'package:first_web/widgets/footer.dart';
@@ -8,7 +6,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:gap/gap.dart';
 import '../../../../widgets/appbar.dart';
 import '../../../../widgets/drawer.dart';
-
 
 class Wedgeconnectorscreen extends StatefulWidget {
   const Wedgeconnectorscreen({super.key});
@@ -74,7 +71,7 @@ class _Wedgeconnectorscreen extends State<Wedgeconnectorscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(30),
+                  Gap(50),
                   Wedgeconnectorsection(),
                   Gap(200),
                   FooterSection(),

@@ -1,5 +1,3 @@
-
-
 import 'package:first_web/presentation/What-we-do/Power/Pole-Mounted-Transformer/Transformer-section.dart';
 import 'package:first_web/widgets/footer.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +5,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:gap/gap.dart';
 import '../../../../widgets/appbar.dart';
 import '../../../../widgets/drawer.dart';
-
 
 class Transformerscreen extends StatefulWidget {
   const Transformerscreen({super.key});
@@ -73,9 +70,9 @@ class _Transformerscreen extends State<Transformerscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(30),
+                  Gap(50),
                   Transformersection(),
-                  Gap(200),
+                  Gap(100),
                   FooterSection(),
                 ],
               ),
