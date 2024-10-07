@@ -1,6 +1,3 @@
-
-
-import 'package:first_web/presentation/What-we-do/Power/Locking-wedge-connector/Wedge-connector-section.dart';
 import 'package:first_web/presentation/What-we-do/Power/meter-socket/Meter-connector-section.dart';
 
 import 'package:first_web/widgets/footer.dart';
@@ -9,7 +6,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:gap/gap.dart';
 import '../../../../widgets/appbar.dart';
 import '../../../../widgets/drawer.dart';
-
 
 class Meterscreen extends StatefulWidget {
   const Meterscreen({super.key});
@@ -77,7 +73,7 @@ class _Meterscreen extends State<Meterscreen> {
                 children: [
                   Gap(30),
                   Metersection(),
-                  Gap(200),
+                  Gap(50),
                   FooterSection(),
                 ],
               ),

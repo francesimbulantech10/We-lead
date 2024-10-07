@@ -1,4 +1,3 @@
-
 import 'package:first_web/presentation/our_blog/Watthour/Watthour.section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -75,7 +74,7 @@ class _Watthourscreen extends State<Watthourscreen> {
                 children: [
                   Gap(30),
                   Watthoursection(),
-                  Gap(200),
+                  Gap(50),
                   FooterSection(),
                 ],
               ),

@@ -1,7 +1,4 @@
-
-
 import 'package:first_web/presentation/What-we-do/water/HORIZONTAL-WOLTMANN/Woltman-section.dart';
-
 
 import 'package:first_web/widgets/footer.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +6,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:gap/gap.dart';
 import '../../../../widgets/appbar.dart';
 import '../../../../widgets/drawer.dart';
-
 
 class Woltmanscreen extends StatefulWidget {
   const Woltmanscreen({super.key});
@@ -75,9 +71,8 @@ class _Woltmanscreen extends State<Woltmanscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                 
                   Woltmansection(),
-                  Gap(20),
+                  Gap(100),
                   FooterSection(),
                 ],
               ),
@@ -88,4 +83,3 @@ class _Woltmanscreen extends State<Woltmanscreen> {
     );
   }
 }
-

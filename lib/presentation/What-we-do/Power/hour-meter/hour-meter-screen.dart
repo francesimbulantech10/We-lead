@@ -8,6 +8,7 @@ import '../../../../widgets/appbar.dart';
 import '../../../../widgets/drawer.dart';
 
 
+// ignore: camel_case_types
 class hourmeterscreen extends StatefulWidget {
   const hourmeterscreen({super.key});
 
@@ -15,6 +16,7 @@ class hourmeterscreen extends StatefulWidget {
   State<hourmeterscreen> createState() => _hourmeterscreen();
 }
 
+// ignore: camel_case_types
 class _hourmeterscreen extends State<hourmeterscreen> {
   bool showAppbar = false;
   late final ScrollController scrollController;

@@ -40,23 +40,23 @@ class _WebViewState extends State<WebView> {
     var size = MediaQuery.sizeOf(context);
     return SizedBox(
         width: size.width,
-        height: 1300,
         child: Column(
           children: [
-            // SizedBox(
-            //     width: size.width,
-            //     height: 300,
-            //     child: Image.asset(
-            //       'our-blogs/unleashing.jpg',
-            //       fit: BoxFit.cover,
-            //     )),
+            SizedBox(
+              width: size.width,
+              height: 400,
+              child: Image.asset(
+                'unleashing/unleashing2.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
             const Gap(30),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: 920,
+                  width: size.width * .7,
                   height: 400,
                   child: Image.asset(
                     'unleashing/unleashing1.jpg',
@@ -66,7 +66,7 @@ class _WebViewState extends State<WebView> {
               ],
             ),
             SizedBox(
-              width: 920,
+              width: size.width * .7,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -105,6 +105,7 @@ class _WebViewState extends State<WebView> {
                   ),
                   const Gap(20),
                   SizedBox(
+                    width: size.width * .7,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,7 +132,9 @@ class _WebViewState extends State<WebView> {
                                   ..onTap = () async {
                                     const url =
                                         'https://www.facebook.com/profile.php?id=100095244557812';
+                                    // ignore: deprecated_member_use
                                     if (await canLaunch(url)) {
+                                      // ignore: deprecated_member_use
                                       await launch(url);
                                     } else {
                                       throw 'Could not launch $url';
@@ -160,7 +163,9 @@ class _WebViewState extends State<WebView> {
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () async {
                                     const url = 'https://weleadants.com/';
+                                    // ignore: deprecated_member_use
                                     if (await canLaunch(url)) {
+                                      // ignore: deprecated_member_use
                                       await launch(url);
                                     } else {
                                       throw 'Could not launch $url';
@@ -181,7 +186,7 @@ class _WebViewState extends State<WebView> {
                                 '/our-blog'; // Use your desired route
                             context.go(route);
                           },
-                          bgColor: Colors.blue,
+                          bgColor: const Color.fromARGB(255, 255, 102, 0),
                         ),
                       ],
                     ),
@@ -206,7 +211,162 @@ class _MobileViewState extends State<MobileView> {
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
     return SizedBox(
-      width: size.width,
-    );
+        width: size.width,
+        child: Column(
+          children: [
+            SizedBox(
+              width: size.width ,
+              height: 400,
+              child: Image.asset(
+                'unleashing/unleashing2.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
+            const Gap(30),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: size.width * .8,
+                  height: 400,
+                  child: Image.asset(
+                    'unleashing/unleashing1.jpg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              width: size.width * .8,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Gap(20),
+                  const Text(
+                    'Unlocking the Market Value of Filipino-Made Local Products for Export',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
+                  const Gap(50),
+                  const Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        width: 920,
+                        child: Text(
+                          'Cultural Authenticity and Unique Appeal:',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const Gap(50),
+                  const Text(
+                    'Step into the world of international sourcing with GlobalANTicipations Hub, where innovation meets the global marketplace, fueled by the power of ANTS Sourcing. Embracing the mantra of "We Lead, We Source," our platform becomes the driving force for Philippine businesses seeking boundless opportunities.\n\n'
+                    'ANTS Sourcing offers a bespoke global reach, enhances efficiency in sourcing processes, and establishes a gold standard for security and trust. Delve into diverse markets, build supplier confidence, navigate regulatory landscapes, and bridge cultures seamlessly. Explore the transformative possibilities at www.weleadants.com and witness how we turn global reach into a strategic advantage.\n\n'
+                    'Join the global revolution with us – this isn\'t just a sourcing journey; it\'s an extraordinary adventure. Contact us today and let\'s unleash your global potential together!',
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  const Gap(20),
+                  SizedBox(
+                    width: size.width * .8,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text('Please visit us at.'),
+                        const Gap(20),
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              const TextSpan(
+                                text: 'Facebook Page: ',
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.black), // Normal text color
+                              ),
+                              TextSpan(
+                                text: 'Ants',
+                                style: const TextStyle(
+                                    color: Colors.blue,
+                                    fontSize: 18 // Link color
+                                    // Removed underline decoration
+                                    ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () async {
+                                    const url =
+                                        'https://www.facebook.com/profile.php?id=100095244557812';
+                                    // ignore: deprecated_member_use
+                                    if (await canLaunch(url)) {
+                                      // ignore: deprecated_member_use
+                                      await launch(url);
+                                    } else {
+                                      throw 'Could not launch $url';
+                                    }
+                                  },
+                              ),
+                            ],
+                          ),
+                        ),
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              const TextSpan(
+                                text: 'Website: ',
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.black), // Normal text color
+                              ),
+                              TextSpan(
+                                text: 'WeLeadAnts',
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.blue, // Link color
+                                  // Removed underline decoration
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () async {
+                                    const url = 'https://weleadants.com/';
+                                    // ignore: deprecated_member_use
+                                    if (await canLaunch(url)) {
+                                      // ignore: deprecated_member_use
+                                      await launch(url);
+                                    } else {
+                                      throw 'Could not launch $url';
+                                    }
+                                  },
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 1000,
+                        ),
+                        const Gap(20),
+                        ButtonWidget(
+                          title: 'See more blogs',
+                          action: () {
+                            String route =
+                                '/our-blog'; // Use your desired route
+                            context.go(route);
+                          },
+                          bgColor: const Color.fromARGB(255, 255, 102, 0),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ));
   }
 }

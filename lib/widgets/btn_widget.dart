@@ -4,7 +4,7 @@ class ButtonWidget extends StatelessWidget {
   final String title;
   final VoidCallback action;
   final Color bgColor;
-  
+
   const ButtonWidget({
     super.key,
     required this.title,
@@ -32,7 +32,8 @@ class ButtonWidget extends StatelessWidget {
           title,
           style: const TextStyle(
             fontSize: 18,
-            color: Colors.white, // Optional: to improve contrast with bgColor
+            color: Color.fromARGB(255, 255, 255,
+                255), // Optional: to improve contrast with bgColor
           ),
           textAlign: TextAlign.center,
         ),

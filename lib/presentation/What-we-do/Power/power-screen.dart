@@ -1,4 +1,3 @@
-
 import 'package:first_web/presentation/What-we-do/Power/power-section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -73,9 +72,9 @@ class _Powerscreen extends State<Powerscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(100),
+                  Gap(50),
                   PowerSection(),
-                  Gap(200),
+                  Gap(50),
                   FooterSection(),
                 ],
               ),

@@ -1,7 +1,4 @@
-
-
 import 'package:first_web/presentation/What-we-do/Power/Fuse-connector/Fuse-connector-section.dart';
-
 
 import 'package:first_web/widgets/footer.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +6,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:gap/gap.dart';
 import '../../../../widgets/appbar.dart';
 import '../../../../widgets/drawer.dart';
-
 
 class Fusescreen extends StatefulWidget {
   const Fusescreen({super.key});
@@ -75,9 +71,8 @@ class _Fusescreen extends State<Fusescreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                 
                   Fusesection(),
-                  Gap(20),
+                  Gap(50),
                   FooterSection(),
                 ],
               ),

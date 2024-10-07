@@ -1,9 +1,8 @@
-
 import 'package:first_web/presentation/What-we-do/Software/software.section.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:gap/gap.dart';
 
 import '../../../widgets/appbar.dart';
@@ -74,9 +73,8 @@ class _Softwarescreen extends State<Softwarescreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(30),
                   Softwaresection(),
-                  Gap(200),
+                  Gap(50),
                   FooterSection(),
                 ],
               ),

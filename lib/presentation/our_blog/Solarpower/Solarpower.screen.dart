@@ -76,7 +76,7 @@ class _Solarscreen extends State<Solarscreen> {
                 children: [
                   Gap(30),
                   Solarsection(),
-                  Gap(20),
+                  Gap(50),
                   FooterSection(),
                 ],
               ),

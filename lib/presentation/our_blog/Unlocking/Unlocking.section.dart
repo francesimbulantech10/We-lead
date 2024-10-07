@@ -40,18 +40,17 @@ class _WebViewState extends State<WebView> {
     var size = MediaQuery.sizeOf(context);
     return SizedBox(
         width: size.width,
-        height: 1300,
         child: Column(
           children: [
             SizedBox(
                 width: size.width,
                 height: 300,
                 child: Image.asset(
-                  'our-blogs/empowerment.jpg',
+                  'unlocking/unlocking2.jpg',
                   fit: BoxFit.cover,
                 )),
             const Gap(30),
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -129,7 +128,9 @@ class _WebViewState extends State<WebView> {
                                   ..onTap = () async {
                                     const url =
                                         'https://www.facebook.com/pamilya.com.ph';
+                                    // ignore: deprecated_member_use
                                     if (await canLaunch(url)) {
+                                      // ignore: deprecated_member_use
                                       await launch(url);
                                     } else {
                                       throw 'Could not launch $url';
@@ -158,7 +159,9 @@ class _WebViewState extends State<WebView> {
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () async {
                                     const url = 'https://pamilya.com.ph/';
+                                    // ignore: deprecated_member_use
                                     if (await canLaunch(url)) {
+                                      // ignore: deprecated_member_use
                                       await launch(url);
                                     } else {
                                       throw 'Could not launch $url';
@@ -179,7 +182,7 @@ class _WebViewState extends State<WebView> {
                                 '/our-blog'; // Use your desired route
                             context.go(route);
                           },
-                          bgColor: Colors.blue,
+                          bgColor: const Color.fromARGB(255, 255, 102, 0),
                         ),
                       ],
                     ),
@@ -204,7 +207,158 @@ class _MobileViewState extends State<MobileView> {
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
     return SizedBox(
-      width: size.width,
-    );
+        width: size.width,
+        child: Column(
+          children: [
+            SizedBox(
+                width: size.width,
+                height: 300,
+                child: Image.asset(
+                  'unlocking/unlocking2.jpg',
+                  fit: BoxFit.cover,
+                )),
+            const Gap(30),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: size.width * .8,
+                  height: 400,
+                  child: Image.asset(
+                    'unlocking/unlocking1.jpg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              width: size.width * .8,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Gap(20),
+                  const Text(
+                    'Unlocking the Market Value of Filipino-Made Local Products for Export',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
+                  const Gap(50),
+                  const Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        width: 920,
+                        child: Text(
+                          'Cultural Authenticity and Unique Appeal:',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const Gap(50),
+                  const Text(
+                    'Cultural Authenticity and Unique Appeal: Filipino-made local products possess a distinct charm that stems from the countrys vibrant cultural heritage. From traditional handicrafts and textiles to homegrown food products and fashion accessories, these goods encapsulate the essence of Filipino craftsmanship and creativity. International consumers are increasingly drawn to products that tell a story and offer an authentic experience, making Filipino-made local products highly sought-after in the global market.',
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  const Gap(20),
+                  SizedBox(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text('Please visit us at.'),
+                        const Gap(20),
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              const TextSpan(
+                                text: 'Facebook Page: ',
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.black), // Normal text color
+                              ),
+                              TextSpan(
+                                text: 'Pamilya.com.ph',
+                                style: const TextStyle(
+                                    color: Colors.blue,
+                                    fontSize: 18 // Link color
+                                    // Removed underline decoration
+                                    ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () async {
+                                    const url =
+                                        'https://www.facebook.com/pamilya.com.ph';
+                                    // ignore: deprecated_member_use
+                                    if (await canLaunch(url)) {
+                                      // ignore: deprecated_member_use
+                                      await launch(url);
+                                    } else {
+                                      throw 'Could not launch $url';
+                                    }
+                                  },
+                              ),
+                            ],
+                          ),
+                        ),
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              const TextSpan(
+                                text: 'Website: ',
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.black), // Normal text color
+                              ),
+                              TextSpan(
+                                text: 'Pamilya Website',
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.blue, // Link color
+                                  // Removed underline decoration
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () async {
+                                    const url = 'https://pamilya.com.ph/';
+                                    // ignore: deprecated_member_use
+                                    if (await canLaunch(url)) {
+                                      // ignore: deprecated_member_use
+                                      await launch(url);
+                                    } else {
+                                      throw 'Could not launch $url';
+                                    }
+                                  },
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 1000,
+                        ),
+                        const Gap(20),
+                        ButtonWidget(
+                          title: 'See more blogs',
+                          action: () {
+                            String route =
+                                '/our-blog'; // Use your desired route
+                            context.go(route);
+                          },
+                          bgColor: const Color.fromARGB(255, 255, 102, 0),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ));
   }
 }
