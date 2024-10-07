@@ -37,6 +37,7 @@ class WebView extends StatefulWidget {
 }
 
 class _WebViewState extends State<WebView> with TickerProviderStateMixin {
+  int? hoverIndex;
   final List<String> imgList = [
     'WElead2.jpg',
     'Pamilya1.jpg',
@@ -45,10 +46,10 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
     'Sourcinghome.jpg',
   ];
   final List<String> imgtitle = [
-    'Providing the best option',
-    'Online market to your local products',
+    'Providing the Best Option',
+    'Online Market to your Local Products',
     'We Lead in Commerce & Technology',
-    'Driving Success through innovation & solutions',
+    'Driving Success through Innovation & Solutions',
     'Your Global Sourcing Partner',
   ];
   int _currentIndex = 0;
@@ -181,7 +182,6 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
         width: size.width,
         child: Column(
           children: [
-         
             Container(
               color: const Color(0xFF003B56),
               child: Padding(
@@ -222,12 +222,10 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
               ),
             ),
 
-            const Gap(50),
-
             Container(
               color: Colors.white,
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 50),
+                padding: const EdgeInsets.symmetric(vertical: 70),
                 child: Column(
                   children: [
                     const Center(
@@ -251,82 +249,104 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
                             .map((index, item) {
                               return MapEntry(
                                 index,
-                                InkWell(
-                                  onTap: () {
-                                    // Use the links list for navigation
-                                    context.go(links[index]);
+                                MouseRegion(
+                                  onEnter: (_) {
+                                    setState(() {
+                                      hoverIndex =
+                                          index; // Track the hovered item index
+                                    });
                                   },
-                                  child: Container(
-                                    width: 300, // Fixed width of each card
-                                    height: 450, // Fixed height of each card
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                          width: 0.5,
-                                          color: Colors.grey.shade400),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color:
-                                              // ignore: deprecated_member_use
-                                              Colors.grey.withOpacity(0.5),
-                                          spreadRadius: 1,
-                                          blurRadius: 6,
-                                          offset: const Offset(
-                                              0, 3), // Position of shadow
-                                        ),
-                                      ],
-                                    ),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        // Image section
-                                        SizedBox(
-                                          height: 200,
-                                          width: double.infinity, // Full width
-                                          child: ClipRRect(
-                                            borderRadius: const BorderRadius
-                                                .vertical(
-                                                top: Radius.circular(
-                                                    10)), // Rounded top corners
-                                            child: Image.asset(
-                                              item["image"]!,
-                                              fit: BoxFit
-                                                  .cover, // Fill the space with the image
+                                  onExit: (_) {
+                                    setState(() {
+                                      hoverIndex =
+                                          null; // Reset when mouse leaves the container
+                                    });
+                                  },
+                                  child: InkWell(
+                                    onTap: () {
+                                      // Use the links list for navigation
+                                      context.go(links[index]);
+                                    },
+                                    child: Container(
+                                      width: 300, // Fixed width of each card
+                                      height: 450, // Fixed height of each card
+                                      decoration: BoxDecoration(
+                                        color: hoverIndex == index
+                                            ? const Color(0xFF003B56)
+                                            : Colors
+                                                .white, // Change color on hover
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                            width: 0.5,
+                                            color: Colors.grey.shade400),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.grey.withOpacity(0.5),
+                                            spreadRadius: 1,
+                                            blurRadius: 6,
+                                            offset: const Offset(
+                                                0, 3), // Position of shadow
+                                          ),
+                                        ],
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          // Image section
+                                          SizedBox(
+                                            height: 200,
+                                            width:
+                                                double.infinity, // Full width
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  const BorderRadius.vertical(
+                                                top: Radius.circular(10),
+                                              ), // Rounded top corners
+                                              child: Image.asset(
+                                                item["image"]!,
+                                                fit: BoxFit
+                                                    .cover, // Fill the space with the image
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                        const Gap(20),
-                                        // Title section
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 10),
-                                          child: Text(
-                                            item["title"]!,
-                                            style: const TextStyle(
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.bold,
-                                              color: Color(
-                                                  0xFF003B56), // Purple title color
+                                          const Gap(20),
+                                          // Title section
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10),
+                                            child: Text(
+                                              item["title"]!,
+                                              style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.bold,
+                                                color: hoverIndex == index
+                                                    ? Colors
+                                                        .white // Change title color to white on hover
+                                                    : Colors
+                                                        .black, // Default to black when not hovered
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                        const Gap(10),
-                                        // Description section
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 10),
-                                          child: Text(
-                                            item["description"]!,
-                                            style: const TextStyle(
-                                              fontSize: 14,
-                                              color: Colors
-                                                  .black87, // Regular black description
+                                          const Gap(10),
+                                          // Description section
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 10),
+                                            child: Text(
+                                              item["description"]!,
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color: hoverIndex == index
+                                                    ? Colors
+                                                        .white // Change title color to white on hover
+                                                    : Colors
+                                                        .black, // Regular black description
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
