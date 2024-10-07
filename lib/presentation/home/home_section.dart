@@ -181,7 +181,7 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
         width: size.width,
         child: Column(
           children: [
-            //1st display carousel slider
+         
             Container(
               color: const Color(0xFF003B56),
               child: Padding(
