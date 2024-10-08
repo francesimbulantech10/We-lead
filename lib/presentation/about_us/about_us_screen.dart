@@ -1,3 +1,4 @@
+import 'package:first_web/widgets/fadeintextwidget.dart';
 import 'package:flutter/material.dart';
 
 import 'package:gap/gap.dart';
@@ -58,7 +59,7 @@ class _WebViewState extends State<WebView> {
     "We show our love for the country by investing in it. Starting a business is investing in the country. By creating value, generating jobs, and contributing to the economy, we make a positive impact on our society and the nation. We show our love for the country by honoring the values and traditions of the Filipino culture and sharing them with the world.",
     "We seek to imitate Christ’s love in loving the people thru transformed lives. We serve them with honesty, integrity, and compassion as they entrust us with their hopes and dreams. We thus strive and endeavor to create a better future for them and their children.",
   ];
-
+  //WEBVIEW
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
@@ -145,13 +146,12 @@ class _WebViewState extends State<WebView> {
                       const Gap(80),
                       Column(
                         children: [
-                          const Text(
-                            'Why Choose us',
-                            textAlign: TextAlign.center,
+                          const FadeInText(
+                            text: 'Why Choose Us',
                             style: TextStyle(
-                              fontSize: 60,
-                              fontWeight: FontWeight.bold,
                               color: Color(0xFF003B56),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 60,
                             ),
                           ),
                           Container(
@@ -180,13 +180,12 @@ class _WebViewState extends State<WebView> {
                           SizedBox(
                             child: Column(
                               children: [
-                                const Text(
-                                  'Corporate Profile',
-                                  textAlign: TextAlign.center,
+                                const FadeInText(
+                                  text: 'Corporate Profile',
                                   style: TextStyle(
-                                    fontSize: 60,
-                                    fontWeight: FontWeight.bold,
                                     color: Color(0xFF003B56),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 60,
                                   ),
                                 ),
                                 Container(
@@ -371,13 +370,13 @@ class _WebViewState extends State<WebView> {
                           SizedBox(
                             child: Column(
                               children: [
-                                const Text(
-                                  'Core Values',
-                                  textAlign: TextAlign.center,
+                                const FadeInText(
+                                  text: 'Core Values',
                                   style: TextStyle(
-                                      fontSize: 60,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color(0xFF003B56)),
+                                    color: Color(0xFF003B56),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 60,
+                                  ),
                                 ),
                                 Container(
                                   height: 10, // Thickness of the line
@@ -471,7 +470,7 @@ class _TabletView extends State<TabletView> {
     "We show our love for the country by investing in it. Starting a business is investing in the country. By creating value, generating jobs, and contributing to the economy, we make a positive impact on our society and the nation. We show our love for the country by honoring the values and traditions of the Filipino culture and sharing them with the world.",
     "We seek to imitate Christ’s love in loving the people thru transformed lives. We serve them with honesty, integrity, and compassion as they entrust us with their hopes and dreams. We thus strive and endeavor to create a better future for them and their children.",
   ];
-
+  //Tablet View
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
@@ -559,13 +558,12 @@ class _TabletView extends State<TabletView> {
                       const Gap(80),
                       Column(
                         children: [
-                          const Text(
-                            'Why Choose us',
-                            textAlign: TextAlign.center,
+                          const FadeInText(
+                            text: 'Why Choose US',
                             style: TextStyle(
-                              fontSize: 60,
-                              fontWeight: FontWeight.bold,
                               color: Color(0xFF003B56),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 60,
                             ),
                           ),
                           // Gap between the text and the line
@@ -587,189 +585,170 @@ class _TabletView extends State<TabletView> {
                 const Gap(80),
                 Column(
                   children: [
-                    SizedBox(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            child: Column(
-                              children: [
-                                const Text(
-                                  'Corporate Profile',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: 60,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xFF003B56),
-                                  ),
-                                ),
-                                Container(
-                                  height: 10, // Thickness of the line
-                                  width: 100, // Adjust the width as needed
-                                  color: const Color.fromARGB(255, 255, 102,
-                                      0), // Orange color for the line
-                                ),
-                              ],
-                            ),
+                    Column(
+                      children: [
+                        const FadeInText(
+                          text: 'Corporate Profile',
+                          style: TextStyle(
+                            color: Color(0xFF003B56),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 60,
                           ),
-                          const Gap(40),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Column(
+                        ),
+                        Container(
+                          height: 10, // Thickness of the line
+                          width: 100, // Adjust the width as needed
+                          color: const Color.fromARGB(
+                              255, 255, 102, 0), // Orange color for the line
+                        ),
+                      ],
+                    ),
+                    const Gap(40),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            SizedBox(
+                              child: Column(
                                 children: [
-                                  SizedBox(
+                                  Container(
+                                    width: 500,
+                                    height: 650,
+                                    //padding: const EdgeInsets.all(8),
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                          width: 0.5, color: Colors.black),
+                                    ),
                                     child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
-                                        Container(
-                                          width: 500,
-                                          height: 650,
-                                          //padding: const EdgeInsets.all(8),
-                                          decoration: BoxDecoration(
-                                            border: Border.all(
-                                                width: 0.5,
-                                                color: Colors.black),
-                                          ),
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Stack(
-                                                children: [
-                                                  SizedBox(
-                                                    height: 200,
-                                                    width: size.width,
-                                                    child: Image.asset(
-                                                      "about-us/briefstory.jpg",
-                                                      fit: BoxFit.fill,
-                                                    ),
-                                                  ),
-                                                  Center(
-                                                    child: Padding(
-                                                      padding: const EdgeInsets
-                                                          .only(
-                                                          top:
-                                                              145), // Padding around the text
-                                                      child: Container(
-                                                        width: size.width,
-                                                        padding: const EdgeInsets
-                                                            .all(
-                                                            8.0), // Padding inside the container
-                                                        color: Colors
-                                                            .white70, // Background color with opacity
-                                                        child: const Text(
-                                                          "Brief History",
-                                                          textAlign:
-                                                              TextAlign.center,
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontSize: 27,
-                                                            color: Colors
-                                                                .black, // Text color
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
+                                        Stack(
+                                          children: [
+                                            SizedBox(
+                                              height: 200,
+                                              width: size.width,
+                                              child: Image.asset(
+                                                "about-us/briefstory.jpg",
+                                                fit: BoxFit.fill,
                                               ),
-                                              const Gap(20),
-                                              const Padding(
-                                                padding: EdgeInsets.only(
-                                                    left: 9.0,
-                                                    right:
-                                                        20.0), // Padding around the text
-                                                child: Text(
-                                                  "We Lead Comtech is a company that specializes in providing products and solutions for power, energy, water, and software applications to some of the large companies locally and globally. Our power products include power transformers, automatic voltage regulators energy meters, and distribution transformers to name a few; Energy solutions are for providing renewable energy sources like Solar and Hydro; Water products cater to water treatment, water meters, etc. We also offer software solutions for enterprise like website development, point of sales, or anything that can deliver efficient and personalized customer service and engagement.\n\n"
-                                                  "At We Lead Comtech, we are committed to excellence in everything we do. Our core values of love for God, love for the people, and love for the country guide us in our work. We strive to be a company that not only delivers innovative solutions but also make a positive impact on the society.",
-                                                  style: TextStyle(
-                                                    fontSize: 15,
-                                                    height: 1.6,
-                                                    // Adjust line height if needed
+                                            ),
+                                            Center(
+                                              child: Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top:
+                                                        145), // Padding around the text
+                                                child: Container(
+                                                  width: size.width,
+                                                  padding: const EdgeInsets.all(
+                                                      8.0), // Padding inside the container
+                                                  color: Colors
+                                                      .white70, // Background color with opacity
+                                                  child: const Text(
+                                                    "Brief History",
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontSize: 27,
+                                                      color: Colors
+                                                          .black, // Text color
+                                                    ),
                                                   ),
-                                                  textAlign: TextAlign.justify,
                                                 ),
                                               ),
-                                            ],
-                                          ),
+                                            ),
+                                          ],
                                         ),
                                         const Gap(20),
-                                        Container(
-                                          width: 500,
-                                          height: 660,
-                                          //padding: const EdgeInsets.all(8),
-                                          decoration: BoxDecoration(
-                                            border: Border.all(
-                                                width: 0.5,
-                                                color: Colors.black),
+                                        const Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 9.0,
+                                              right:
+                                                  20.0), // Padding around the text
+                                          child: Text(
+                                            "We Lead Comtech is a company that specializes in providing products and solutions for power, energy, water, and software applications to some of the large companies locally and globally. Our power products include power transformers, automatic voltage regulators energy meters, and distribution transformers to name a few; Energy solutions are for providing renewable energy sources like Solar and Hydro; Water products cater to water treatment, water meters, etc. We also offer software solutions for enterprise like website development, point of sales, or anything that can deliver efficient and personalized customer service and engagement.\n\n"
+                                            "At We Lead Comtech, we are committed to excellence in everything we do. Our core values of love for God, love for the people, and love for the country guide us in our work. We strive to be a company that not only delivers innovative solutions but also make a positive impact on the society.",
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              height: 1.6,
+                                              // Adjust line height if needed
+                                            ),
+                                            textAlign: TextAlign.justify,
                                           ),
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Stack(
-                                                children: [
-                                                  SizedBox(
-                                                    height: 200,
-                                                    width: size.width,
-                                                    child: Image.asset(
-                                                      "about-us/briefstory.jpg",
-                                                      fit: BoxFit.fill,
-                                                    ),
-                                                  ),
-                                                  Center(
-                                                    child: Padding(
-                                                      padding: const EdgeInsets
-                                                          .only(
-                                                          top:
-                                                              145), // Padding around the text
-                                                      child: Container(
-                                                        width: size.width,
-                                                        padding: const EdgeInsets
-                                                            .all(
-                                                            8.0), // Padding inside the container
-                                                        color: Colors
-                                                            .white70, // Background color with opacity
-                                                        child: const Text(
-                                                          "About We Lead",
-                                                          textAlign:
-                                                              TextAlign.center,
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontSize: 27,
-                                                            color: Colors
-                                                                .black, // Text color
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Gap(20),
+                                  Container(
+                                    width: 500,
+                                    height: 660,
+                                    //padding: const EdgeInsets.all(8),
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                          width: 0.5, color: Colors.black),
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Stack(
+                                          children: [
+                                            SizedBox(
+                                              height: 200,
+                                              width: size.width,
+                                              child: Image.asset(
+                                                "about-us/briefstory.jpg",
+                                                fit: BoxFit.fill,
                                               ),
-                                              const Gap(20),
-                                              const Padding(
-                                                padding: EdgeInsets.all(
-                                                    16.0), // Padding around the text
-                                                child: Text(
-                                                  "We Lead Comtech is a company that specializes in providing products and solutions for power, energy, water, and software applications to some of the large companies locally and globally. Our power products include power transformers, automatic voltage regulators energy meters, and distribution transformers to name a few; Energy solutions are for providing renewable energy sources like Solar and Hydro; Water products cater to water treatment, water meters, etc. We also offer software solutions for enterprise like website development, point of sales, or anything that can deliver efficient and personalized customer service and engagement.\n\n"
-                                                  "At We Lead Comtech, we are committed to excellence in everything we do. Our core values of love for God, love for the people, and love for the country guide us in our work. We strive to be a company that not only delivers innovative solutions but also make a positive impact on the society.",
-                                                  style: TextStyle(
-                                                    fontSize: 15,
-                                                    height: 1.4,
-                                                    // Adjust line height if needed
+                                            ),
+                                            Center(
+                                              child: Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top:
+                                                        145), // Padding around the text
+                                                child: Container(
+                                                  width: size.width,
+                                                  padding: const EdgeInsets.all(
+                                                      8.0), // Padding inside the container
+                                                  color: Colors
+                                                      .white70, // Background color with opacity
+                                                  child: const Text(
+                                                    "About We Lead",
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontSize: 27,
+                                                      color: Colors
+                                                          .black, // Text color
+                                                    ),
                                                   ),
-                                                  textAlign: TextAlign.justify,
                                                 ),
                                               ),
-                                            ],
+                                            ),
+                                          ],
+                                        ),
+                                        const Gap(20),
+                                        const Padding(
+                                          padding: EdgeInsets.all(
+                                              16.0), // Padding around the text
+                                          child: Text(
+                                            "We Lead Comtech is a company that specializes in providing products and solutions for power, energy, water, and software applications to some of the large companies locally and globally. Our power products include power transformers, automatic voltage regulators energy meters, and distribution transformers to name a few; Energy solutions are for providing renewable energy sources like Solar and Hydro; Water products cater to water treatment, water meters, etc. We also offer software solutions for enterprise like website development, point of sales, or anything that can deliver efficient and personalized customer service and engagement.\n\n"
+                                            "At We Lead Comtech, we are committed to excellence in everything we do. Our core values of love for God, love for the people, and love for the country guide us in our work. We strive to be a company that not only delivers innovative solutions but also make a positive impact on the society.",
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              height: 1.4,
+                                              // Adjust line height if needed
+                                            ),
+                                            textAlign: TextAlign.justify,
                                           ),
                                         ),
                                       ],
@@ -777,85 +756,80 @@ class _TabletView extends State<TabletView> {
                                   ),
                                 ],
                               ),
-                            ],
-                          ),
-                          const Gap(70),
-                          SizedBox(
-                            child: Column(
-                              children: [
-                                const Text(
-                                  'Core Values',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: 60,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xFF003B56),
-                                  ),
-                                ),
-                                Container(
-                                  height: 10, // Thickness of the line
-                                  width: 100, // Adjust the width as needed
-                                  color: const Color.fromARGB(255, 255, 102,
-                                      0), // Orange color for the line
-                                ),
-                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const Gap(70),
+                    SizedBox(
+                      child: Column(
+                        children: [
+                          const FadeInText(
+                            text: 'Core Values',
+                            style: TextStyle(
+                              color: Color(0xFF003B56),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 60,
                             ),
                           ),
-                          const Gap(50),
-                          SizedBox(
-                            child: Column(
-                              children:
-                                  List.generate(corevalues.length, (index) {
-                                return Wrap(
-                                  alignment: WrapAlignment.center,
-                                  crossAxisAlignment: WrapCrossAlignment.center,
-                                  spacing: 10,
-                                  children: [
-                                    SizedBox(
-                                      height: 300,
-                                      child: Column(
-                                        children: [
-                                          SizedBox(
-                                            width: 500,
-                                            child: Column(
-                                              children: [
-                                                Text(
-                                                  corevalues[index],
-                                                  style: const TextStyle(
-                                                      fontSize: 24,
-                                                      color: Colors.black,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                  textAlign: TextAlign.center,
-                                                ),
-                                                const Gap(50),
-                                                SizedBox(
-                                                  width: 400,
-                                                  child: Text(
-                                                    title[index],
-                                                    style: const TextStyle(
-                                                      fontSize: 16,
-                                                      color: Colors.black,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
-                                                    maxLines: 8,
-                                                    textAlign:
-                                                        TextAlign.justify,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                );
-                              }),
-                            ),
+                          Container(
+                            height: 10, // Thickness of the line
+                            width: 100, // Adjust the width as needed
+                            color: const Color.fromARGB(
+                                255, 255, 102, 0), // Orange color for the line
                           ),
                         ],
+                      ),
+                    ),
+                    const Gap(50),
+                    SizedBox(
+                      child: Column(
+                        children: List.generate(corevalues.length, (index) {
+                          return Wrap(
+                            alignment: WrapAlignment.center,
+                            crossAxisAlignment: WrapCrossAlignment.center,
+                            spacing: 10,
+                            children: [
+                              SizedBox(
+                                height: 300,
+                                child: Column(
+                                  children: [
+                                    SizedBox(
+                                      width: 500,
+                                      child: Column(
+                                        children: [
+                                          Text(
+                                            corevalues[index],
+                                            style: const TextStyle(
+                                                fontSize: 24,
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.bold),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                          const Gap(50),
+                                          SizedBox(
+                                            width: 400,
+                                            child: Text(
+                                              title[index],
+                                              style: const TextStyle(
+                                                fontSize: 16,
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              maxLines: 8,
+                                              textAlign: TextAlign.justify,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          );
+                        }),
                       ),
                     ),
                   ],
@@ -988,13 +962,12 @@ class _MobileViewState extends State<MobileView> {
                       const Gap(80),
                       Column(
                         children: [
-                          const Text(
-                            'Why Choose us',
-                            textAlign: TextAlign.center,
+                          const FadeInText(
+                            text: 'Why Choose Us',
                             style: TextStyle(
-                              fontSize: 60,
-                              fontWeight: FontWeight.bold,
                               color: Color(0xFF003B56),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 60,
                             ),
                           ),
                           Container(
@@ -1023,13 +996,12 @@ class _MobileViewState extends State<MobileView> {
                           SizedBox(
                             child: Column(
                               children: [
-                                const Text(
-                                  'Corporate Profile',
-                                  textAlign: TextAlign.center,
+                                const FadeInText(
+                                  text: 'Corporate Profile',
                                   style: TextStyle(
-                                    fontSize: 60,
-                                    fontWeight: FontWeight.bold,
                                     color: Color(0xFF003B56),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 60,
                                   ),
                                 ),
                                 Container(
@@ -1188,13 +1160,12 @@ class _MobileViewState extends State<MobileView> {
                           const Gap(70),
                           Column(
                             children: [
-                              const Text(
-                                'Core Values',
-                                textAlign: TextAlign.center,
+                              const FadeInText(
+                                text: 'Core Values',
                                 style: TextStyle(
-                                  fontSize: 60,
-                                  fontWeight: FontWeight.bold,
                                   color: Color(0xFF003B56),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 60,
                                 ),
                               ),
                               Container(

@@ -1,4 +1,5 @@
 import 'package:first_web/widgets/auto_size_inter_text.dart';
+import 'package:first_web/widgets/fadeintextwidget.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:gap/gap.dart';
@@ -228,19 +229,21 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
             Container(
               color: Colors.white,
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 70),
+                padding: const EdgeInsets.symmetric(vertical: 120),
                 child: SizedBox(
                   width: size.width,
                   child: Column(
                     children: [
                       Column(
                         children: [
-                          const Text(
-                            'What We Do',
+                          const SizedBox(height: 50), // Simulate scrolling down
+                          const FadeInText(
+                            text: 'What We Do',
                             style: TextStyle(
-                                color: Color(0xFF003B56),
-                                fontWeight: FontWeight.bold,
-                                fontSize: 60),
+                              color: Color(0xFF003B56),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 60,
+                            ),
                           ),
                           // Gap between the text and the line
                           Container(
@@ -385,13 +388,16 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
             //meet our clients
             Column(
               children: [
-                const Text(
-                  'Meet Our Clients',
+                const SizedBox(height: 50), // Simulate scrolling down
+                const FadeInText(
+                  text: 'Meet Our Clients',
                   style: TextStyle(
-                      color: Color(0xFF003B56),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 60),
+                    color: Color(0xFF003B56),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 60,
+                  ),
                 ),
+
                 // Gap between the text and the line
                 Container(
                   height: 10, // Thickness of the line
@@ -441,14 +447,13 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
                             SizedBox(
                               child: Column(
                                 children: [
-                                  const Text(
-                                    'About Us',
+                                  const FadeInText(
+                                    text: 'About Us',
                                     style: TextStyle(
                                       color: Color(0xFF003B56),
                                       fontWeight: FontWeight.bold,
                                       fontSize: 60,
                                     ),
-                                    textAlign: TextAlign.center,
                                   ),
                                   Container(
                                     height: 10, // Thickness of the line
@@ -563,12 +568,13 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
             const Gap(600),
             Column(
               children: [
-                const Text(
-                  'Our Blog',
+                const FadeInText(
+                  text: 'Our Blog',
                   style: TextStyle(
-                      color: Color(0xFF003B56),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 60),
+                    color: Color(0xFF003B56),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 60,
+                  ),
                 ),
                 Container(
                   height: 10, // Thickness of the line
@@ -651,12 +657,13 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
               children: [
                 Column(
                   children: [
-                    const Text(
-                      "Contact",
+                    const FadeInText(
+                      text: 'Contact',
                       style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 60,
-                          color: Color(0xFF003B56)),
+                        color: Color(0xFF003B56),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 60,
+                      ),
                     ),
                     Container(
                       height: 10, // Thickness of the line
@@ -891,12 +898,13 @@ class _TabletViewState extends State<TabletView> {
                         children: [
                           Column(
                             children: [
-                              const Text(
-                                'What We Do',
+                              const FadeInText(
+                                text: 'What we do',
                                 style: TextStyle(
-                                    color: Color(0xFF003B56),
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 60),
+                                  color: Color(0xFF003B56),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 60,
+                                ),
                               ),
                               Container(
                                 height: 10, // Thickness of the line
@@ -1042,12 +1050,13 @@ class _TabletViewState extends State<TabletView> {
                 const Gap(50),
                 Column(
                   children: [
-                    const Text(
-                      'Meet Our Clients',
+                    const FadeInText(
+                      text: 'Meet Our Clients',
                       style: TextStyle(
-                          color: Color(0xFF003B56),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 60),
+                        color: Color(0xFF003B56),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 60,
+                      ),
                     ),
                     Container(
                       height: 10, // Thickness of the line
@@ -1098,12 +1107,13 @@ class _TabletViewState extends State<TabletView> {
                               children: [
                                 Column(
                                   children: [
-                                    const Text(
-                                      'About Us',
+                                    const FadeInText(
+                                      text: 'About us',
                                       style: TextStyle(
-                                          color: Color(0xFF003B56),
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 60),
+                                        color: Color(0xFF003B56),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 60,
+                                      ),
                                     ),
                                     Container(
                                       height: 10, // Thickness of the line
@@ -1232,12 +1242,13 @@ class _TabletViewState extends State<TabletView> {
                 const Gap(1200),
                 Column(
                   children: [
-                    const Text(
-                      'Our Blog',
+                    const FadeInText(
+                      text: 'Our Blog',
                       style: TextStyle(
-                          color: Color(0xFF003B56),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 60),
+                        color: Color(0xFF003B56),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 60,
+                      ),
                     ),
                     Container(
                       height: 10, // Thickness of the line
@@ -1317,16 +1328,18 @@ class _TabletViewState extends State<TabletView> {
                 ),
                 const Gap(50),
                 const Gap(60),
+                //CONTACT
                 Column(
                   children: [
                     Column(
                       children: [
-                        const Text(
-                          "Contact",
+                        const FadeInText(
+                          text: 'Contact',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 60,
-                              color: Color(0xFF003B56)),
+                            color: Color(0xFF003B56),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 60,
+                          ),
                         ),
                         Container(
                           height: 10, // Thickness of the line
@@ -1563,12 +1576,13 @@ class _MobileViewState extends State<MobileView> {
                         children: [
                           Column(
                             children: [
-                              const Text(
-                                'What We Do',
+                              const FadeInText(
+                                text: 'What we do',
                                 style: TextStyle(
-                                    color: Color(0xFF003B56),
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 60),
+                                  color: Color(0xFF003B56),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 60,
+                                ),
                               ),
                               Container(
                                 height: 10, // Thickness of the line
@@ -1716,13 +1730,13 @@ class _MobileViewState extends State<MobileView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Text(
-                      'Meet Our Clients',
+                    const FadeInText(
+                      text: 'Meet Our Clients',
                       style: TextStyle(
-                          color: Color(0xFF003B56),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 60),
-                      textAlign: TextAlign.center,
+                        color: Color(0xFF003B56),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 60,
+                      ),
                     ),
                     Container(
                       height: 10, // Thickness of the line
@@ -1773,12 +1787,13 @@ class _MobileViewState extends State<MobileView> {
                               children: [
                                 Column(
                                   children: [
-                                    const Text(
-                                      'About Us',
+                                    const FadeInText(
+                                      text: 'About us',
                                       style: TextStyle(
-                                          color: Color(0xFF003B56),
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 60),
+                                        color: Color(0xFF003B56),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 60,
+                                      ),
                                     ),
                                     Container(
                                       height: 10, // Thickness of the line
@@ -1914,12 +1929,13 @@ class _MobileViewState extends State<MobileView> {
                 const Gap(1900),
                 Column(
                   children: [
-                    const Text(
-                      'Our Blog',
+                    const FadeInText(
+                      text: 'Our Blog',
                       style: TextStyle(
-                          color: Color(0xFF003B56),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 60),
+                        color: Color(0xFF003B56),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 60,
+                      ),
                     ),
                     Container(
                       height: 10, // Thickness of the line
@@ -2003,12 +2019,13 @@ class _MobileViewState extends State<MobileView> {
                   children: [
                     Column(
                       children: [
-                        const Text(
-                          "Contact",
+                        const FadeInText(
+                          text: 'Contact',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 60,
-                              color: Color(0xFF003B56)),
+                            color: Color(0xFF003B56),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 60,
+                          ),
                         ),
                         Container(
                           height: 10, // Thickness of the line
