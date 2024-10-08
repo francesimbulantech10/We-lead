@@ -66,12 +66,18 @@ class _WebViewState extends State<WebView> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(
-            width: size.width,
-            height: 450,
-            child: Image.asset(
-              'about-us/aboutusbg.jpg',
-              fit: BoxFit.cover,
+          Container(
+            color: const Color(0xFF003B56),
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 15),
+              child: SizedBox(
+                width: size.width,
+                height: 450,
+                child: Image.asset(
+                  'about-us/aboutusbg.jpg',
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
           ),
           const Gap(50),
@@ -99,57 +105,62 @@ class _WebViewState extends State<WebView> {
                     ),
                   ),
                 ),
-                Wrap(
-                  spacing: 150,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: texts.asMap().entries.map((entry) {
-                        int index = entry.key;
-                        String text = entry.value;
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: texts.asMap().entries.map((entry) {
+                    int index = entry.key;
+                    String text = entry.value;
 
-                        return Container(
-                          padding: paddings[
-                              index], // Use individual padding for each item
-                          width:
-                              250, // Same width for all boxes to maintain consistent size
-                          alignment:
-                              Alignment.center, // Center the text in each box
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                                color: Colors.black,
-                                width: 2.0), // Border color and width
-                            borderRadius:
-                                BorderRadius.circular(4.0), // Rounded corners
-                          ),
-                          margin: const EdgeInsets.symmetric(
-                              horizontal: 20), // Add spacing between elements
-                          child: Text(
-                            text,
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        );
-                      }).toList(),
-                    ),
-                  ],
+                    return Container(
+                      padding: paddings[
+                          index], // Use individual padding for each item
+                      width:
+                          250, // Same width for all boxes to maintain consistent size
+                      alignment:
+                          Alignment.center, // Center the text in each box
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                            color: Colors.black,
+                            width: 2.0), // Border color and width
+                        borderRadius:
+                            BorderRadius.circular(4.0), // Rounded corners
+                      ),
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 20), // Add spacing between elements
+                      child: Text(
+                        text,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    );
+                  }).toList(),
                 ),
                 SizedBox(
                   child: Column(
                     children: [
                       const Gap(80),
-                      const Text(
-                        'Why Choose us',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 60,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF003B56),
-                        ),
+                      Column(
+                        children: [
+                          const Text(
+                            'Why Choose us',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 60,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF003B56),
+                            ),
+                          ),
+                          Container(
+                            height: 10, // Thickness of the line
+                            width: 100, // Adjust the width as needed
+                            color: const Color.fromARGB(
+                                255, 255, 102, 0), // Orange color for the line
+                          ),
+                        ],
                       ),
                       const Gap(70),
                       SizedBox(
@@ -166,15 +177,25 @@ class _WebViewState extends State<WebView> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          const SizedBox(
-                            child: Text(
-                              'Corporate Profile',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 60,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFF003B56),
-                              ),
+                          SizedBox(
+                            child: Column(
+                              children: [
+                                const Text(
+                                  'Corporate Profile',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 60,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xFF003B56),
+                                  ),
+                                ),
+                                Container(
+                                  height: 10, // Thickness of the line
+                                  width: 100, // Adjust the width as needed
+                                  color: const Color.fromARGB(255, 255, 102,
+                                      0), // Orange color for the line
+                                ),
+                              ],
                             ),
                           ),
                           const Gap(40),
@@ -347,14 +368,24 @@ class _WebViewState extends State<WebView> {
                             ],
                           ),
                           const Gap(70),
-                          const SizedBox(
-                            child: Text(
-                              'Core Values',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 60,
-                                  fontWeight: FontWeight.bold,
-                                  color: Color(0xFF003B56)),
+                          SizedBox(
+                            child: Column(
+                              children: [
+                                const Text(
+                                  'Core Values',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 60,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFF003B56)),
+                                ),
+                                Container(
+                                  height: 10, // Thickness of the line
+                                  width: 100, // Adjust the width as needed
+                                  color: const Color.fromARGB(255, 255, 102,
+                                      0), // Orange color for the line
+                                ),
+                              ],
                             ),
                           ),
                           const Gap(50),
@@ -526,14 +557,25 @@ class _TabletView extends State<TabletView> {
                   child: Column(
                     children: [
                       const Gap(80),
-                      const Text(
-                        'Why Choose us',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 60,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF003B56),
-                        ),
+                      Column(
+                        children: [
+                          const Text(
+                            'Why Choose us',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 60,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF003B56),
+                            ),
+                          ),
+                          // Gap between the text and the line
+                          Container(
+                            height: 10, // Thickness of the line
+                            width: 100, // Adjust the width as needed
+                            color: const Color.fromARGB(
+                                255, 255, 102, 0), // Orange color for the line
+                          ),
+                        ],
                       ),
                       const Gap(70),
                       SizedBox(
@@ -550,15 +592,25 @@ class _TabletView extends State<TabletView> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          const SizedBox(
-                            child: Text(
-                              'Corporate Profile',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 60,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFF003B56),
-                              ),
+                          SizedBox(
+                            child: Column(
+                              children: [
+                                const Text(
+                                  'Corporate Profile',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 60,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xFF003B56),
+                                  ),
+                                ),
+                                Container(
+                                  height: 10, // Thickness of the line
+                                  width: 100, // Adjust the width as needed
+                                  color: const Color.fromARGB(255, 255, 102,
+                                      0), // Orange color for the line
+                                ),
+                              ],
                             ),
                           ),
                           const Gap(40),
@@ -728,15 +780,25 @@ class _TabletView extends State<TabletView> {
                             ],
                           ),
                           const Gap(70),
-                          const SizedBox(
-                            child: Text(
-                              'Core Values',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 60,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFF003B56),
-                              ),
+                          SizedBox(
+                            child: Column(
+                              children: [
+                                const Text(
+                                  'Core Values',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 60,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xFF003B56),
+                                  ),
+                                ),
+                                Container(
+                                  height: 10, // Thickness of the line
+                                  width: 100, // Adjust the width as needed
+                                  color: const Color.fromARGB(255, 255, 102,
+                                      0), // Orange color for the line
+                                ),
+                              ],
                             ),
                           ),
                           const Gap(50),
@@ -924,14 +986,24 @@ class _MobileViewState extends State<MobileView> {
                   child: Column(
                     children: [
                       const Gap(80),
-                      const Text(
-                        'Why Choose us',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 60,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF003B56),
-                        ),
+                      Column(
+                        children: [
+                          const Text(
+                            'Why Choose us',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 60,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF003B56),
+                            ),
+                          ),
+                          Container(
+                            height: 10, // Thickness of the line
+                            width: 100, // Adjust the width as needed
+                            color: const Color.fromARGB(
+                                255, 255, 102, 0), // Orange color for the line
+                          ),
+                        ],
                       ),
                       const Gap(70),
                       SizedBox(
@@ -948,15 +1020,25 @@ class _MobileViewState extends State<MobileView> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          const SizedBox(
-                            child: Text(
-                              'Corporate Profile',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 60,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFF003B56),
-                              ),
+                          SizedBox(
+                            child: Column(
+                              children: [
+                                const Text(
+                                  'Corporate Profile',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 60,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xFF003B56),
+                                  ),
+                                ),
+                                Container(
+                                  height: 10, // Thickness of the line
+                                  width: 100, // Adjust the width as needed
+                                  color: const Color.fromARGB(255, 255, 102,
+                                      0), // Orange color for the line
+                                ),
+                              ],
                             ),
                           ),
                           const Gap(40),
@@ -1104,16 +1186,24 @@ class _MobileViewState extends State<MobileView> {
                             ),
                           ),
                           const Gap(70),
-                          const SizedBox(
-                            child: Text(
-                              'Core Values',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 60,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFF003B56),
+                          Column(
+                            children: [
+                              const Text(
+                                'Core Values',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 60,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xFF003B56),
+                                ),
                               ),
-                            ),
+                              Container(
+                                height: 10, // Thickness of the line
+                                width: 100, // Adjust the width as needed
+                                color: const Color.fromARGB(255, 255, 102,
+                                    0), // Orange color for the line
+                              ),
+                            ],
                           ),
                           const Gap(50),
                           //core values
