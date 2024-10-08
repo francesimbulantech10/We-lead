@@ -40,7 +40,7 @@ class _WebViewState extends State<WebView> {
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 50),
       color: const Color(0xFF003B56),
       width: size.width,
       child: Padding(
@@ -200,7 +200,6 @@ class _WebViewState extends State<WebView> {
   }
 }
 
-
 //Tablet view
 //Tablet view
 //Tablet view
@@ -217,7 +216,7 @@ class _TabletView extends State<TabletView> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
-   return Container(
+    return Container(
       padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 30),
       color: const Color(0xFF003B56),
       width: size.width,
@@ -378,14 +377,12 @@ class _TabletView extends State<TabletView> {
   }
 }
 
-
 //Mobile View
 //Mobile View
 //Mobile View
 //Mobile View
 //Mobile View
 //Mobile View
-
 
 class MobileView extends StatefulWidget {
   const MobileView({super.key});
@@ -398,7 +395,7 @@ class _MobileViewState extends State<MobileView> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
-   return Container(
+    return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       color: const Color(0xFF003B56),
       width: size.width,
@@ -550,7 +547,6 @@ class _MobileViewState extends State<MobileView> {
               children: [
                 Text('© 2023 by We Lead Commerce and Technology',
                     style: TextStyle(color: Colors.white)),
-                    
               ],
             )
           ],
