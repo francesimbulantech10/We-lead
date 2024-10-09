@@ -341,6 +341,7 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
                                                 item["title"]!,
                                                 style: TextStyle(
                                                   fontSize: 20,
+                                                  fontFamily: 'Oswald',
                                                   fontWeight: FontWeight.bold,
                                                   color: hoverIndex == index
                                                       ? Colors
@@ -487,7 +488,7 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
                     height: 500,
                     width: size.width * .6,
                     child: Image.asset(
-                      'Welead2.jpg',
+                      'bggworkspace.jpg',
                       fit: BoxFit.cover,
                     ), // Image at the end
                   ),
@@ -631,16 +632,14 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
                                 top: 100, left: 50, right: 50),
                             child: Column(
                               children: [
-                                Text(
-                                  ourblogstitle[index],
-                                  textAlign: TextAlign.center,
+                                FadeInText(
+                                  text: ourblogstitle[index],
                                   style: const TextStyle(
                                     fontSize: 21,
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                   ),
-                                  maxLines: 15,
-                                ),
+                                )
                               ],
                             ),
                           ),
@@ -688,7 +687,14 @@ class _WebViewState extends State<WebView> with TickerProviderStateMixin {
   }
 }
 
-//Tablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
 
 class TabletView extends StatefulWidget {
   const TabletView({super.key});
@@ -876,8 +882,12 @@ class _TabletViewState extends State<TabletView> {
                                     height:
                                         800, // Set height to match your container
                                   ),
-                                  AutoSizeInterText(
-                                      text: imgtitle[_currentIndex]),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 80, horizontal: 50),
+                                    child: AutoSizeInterText(
+                                        text: imgtitle[_currentIndex]),
+                                  ),
                                 ],
                               ),
                             ),
@@ -1140,10 +1150,10 @@ class _TabletViewState extends State<TabletView> {
                       ),
                       SizedBox(
                         height: 500,
-                        width: 800,
+                        width: size.width * .9,
                         child: Image.asset(
-                          'Welead2.jpg',
-                          fit: BoxFit.fill,
+                          'bggworkspace.jpg',
+                          fit: BoxFit.cover,
                         ), // Image at the end
                       ),
                       Container(
@@ -1306,16 +1316,14 @@ class _TabletViewState extends State<TabletView> {
                                     top: 100, left: 50, right: 50),
                                 child: Column(
                                   children: [
-                                    Text(
-                                      ourblogstitle[index],
-                                      textAlign: TextAlign.center,
+                                    FadeInText(
+                                      text: ourblogstitle[index],
                                       style: const TextStyle(
                                         fontSize: 21,
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
                                       ),
-                                      maxLines: 15,
-                                    ),
+                                    )
                                   ],
                                 ),
                               ),
@@ -1366,7 +1374,13 @@ class _TabletViewState extends State<TabletView> {
   }
 }
 
-//MOBILE VIEW
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
 
 class MobileView extends StatefulWidget {
   const MobileView({super.key});
@@ -1517,9 +1531,7 @@ class _MobileViewState extends State<MobileView> {
     var size = MediaQuery.sizeOf(context);
     return SizedBox(
       width: size.width,
-      child: Wrap(
-        alignment: WrapAlignment.spaceBetween,
-        crossAxisAlignment: WrapCrossAlignment.center,
+      child: Column(
         children: [
           SizedBox(
             width: size.width,
@@ -1824,10 +1836,10 @@ class _MobileViewState extends State<MobileView> {
                       ),
                       SizedBox(
                         height: 500,
-                        width: 800,
+                        width: size.width * .9,
                         child: Image.asset(
-                          'Welead2.jpg',
-                          fit: BoxFit.fill,
+                          'bggworkspace.jpg',
+                          fit: BoxFit.cover,
                         ), // Image at the end
                       ),
                       Container(
@@ -1990,19 +2002,17 @@ class _MobileViewState extends State<MobileView> {
                               const Gap(20),
                               Padding(
                                 padding: const EdgeInsets.only(
-                                    top: 100, left: 50, right: 50),
+                                    top: 110, left: 25, right: 25),
                                 child: Column(
                                   children: [
-                                    Text(
-                                      ourblogstitle[index],
-                                      textAlign: TextAlign.center,
+                                    FadeInText(
+                                      text: ourblogstitle[index],
                                       style: const TextStyle(
                                         fontSize: 21,
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
                                       ),
-                                      maxLines: 15,
-                                    ),
+                                    )
                                   ],
                                 ),
                               ),

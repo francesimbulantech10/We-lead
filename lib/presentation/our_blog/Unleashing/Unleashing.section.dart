@@ -81,22 +81,8 @@ class _WebViewState extends State<WebView> {
                         color: Colors.black),
                   ),
                   const Gap(50),
-                  const Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        width: 920,
-                        child: Text(
-                          'Cultural Authenticity and Unique Appeal:',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(fontSize: 18),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const Gap(50),
                   const Text(
+                    'Cultural Authenticity and Unique Appeal:\n\n'
                     'Step into the world of international sourcing with GlobalANTicipations Hub, where innovation meets the global marketplace, fueled by the power of ANTS Sourcing. Embracing the mantra of "We Lead, We Source," our platform becomes the driving force for Philippine businesses seeking boundless opportunities.\n\n'
                     'ANTS Sourcing offers a bespoke global reach, enhances efficiency in sourcing processes, and establishes a gold standard for security and trust. Delve into diverse markets, build supplier confidence, navigate regulatory landscapes, and bridge cultures seamlessly. Explore the transformative possibilities at www.weleadants.com and witness how we turn global reach into a strategic advantage.\n\n'
                     'Join the global revolution with us – this isn\'t just a sourcing journey; it\'s an extraordinary adventure. Contact us today and let\'s unleash your global potential together!',
@@ -199,6 +185,20 @@ class _WebViewState extends State<WebView> {
   }
 }
 
+
+
+
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+
+
+
+
 class MobileView extends StatefulWidget {
   const MobileView({super.key});
 
@@ -215,7 +215,7 @@ class _MobileViewState extends State<MobileView> {
         child: Column(
           children: [
             SizedBox(
-              width: size.width ,
+              width: size.width,
               height: 400,
               child: Image.asset(
                 'unleashing/unleashing2.jpg',
@@ -253,22 +253,8 @@ class _MobileViewState extends State<MobileView> {
                         color: Colors.black),
                   ),
                   const Gap(50),
-                  const Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        width: 920,
-                        child: Text(
-                          'Cultural Authenticity and Unique Appeal:',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(fontSize: 18),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const Gap(50),
                   const Text(
+                    'Cultural Authenticity and Unique Appeal:\n\n'
                     'Step into the world of international sourcing with GlobalANTicipations Hub, where innovation meets the global marketplace, fueled by the power of ANTS Sourcing. Embracing the mantra of "We Lead, We Source," our platform becomes the driving force for Philippine businesses seeking boundless opportunities.\n\n'
                     'ANTS Sourcing offers a bespoke global reach, enhances efficiency in sourcing processes, and establishes a gold standard for security and trust. Delve into diverse markets, build supplier confidence, navigate regulatory landscapes, and bridge cultures seamlessly. Explore the transformative possibilities at www.weleadants.com and witness how we turn global reach into a strategic advantage.\n\n'
                     'Join the global revolution with us – this isn\'t just a sourcing journey; it\'s an extraordinary adventure. Contact us today and let\'s unleash your global potential together!',

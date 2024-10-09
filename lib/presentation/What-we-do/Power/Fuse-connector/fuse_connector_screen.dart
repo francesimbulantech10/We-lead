@@ -1,4 +1,4 @@
-import 'package:first_web/presentation/What-we-do/water/MULTI-JET%20VANE/Jet-vane-section.dart';
+import 'package:first_web/presentation/What-we-do/Power/Fuse-connector/fuse_connector_section.dart';
 
 import 'package:first_web/widgets/footer.dart';
 import 'package:flutter/material.dart';
@@ -7,14 +7,14 @@ import 'package:gap/gap.dart';
 import '../../../../widgets/appbar.dart';
 import '../../../../widgets/drawer.dart';
 
-class Jetvanescreen extends StatefulWidget {
-  const Jetvanescreen({super.key});
+class Fusescreen extends StatefulWidget {
+  const Fusescreen({super.key});
 
   @override
-  State<Jetvanescreen> createState() => _Jetvanescreen();
+  State<Fusescreen> createState() => _Fusescreen();
 }
 
-class _Jetvanescreen extends State<Jetvanescreen> {
+class _Fusescreen extends State<Fusescreen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();
@@ -71,7 +71,7 @@ class _Jetvanescreen extends State<Jetvanescreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Jetvanesection(),
+                  Fusesection(),
                   Gap(50),
                   FooterSection(),
                 ],

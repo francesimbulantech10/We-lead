@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
-class Wedgeconnectorsection extends StatefulWidget {
-  const Wedgeconnectorsection({super.key});
+class Metersection extends StatefulWidget {
+  const Metersection({super.key});
 
   @override
-  State<Wedgeconnectorsection> createState() => _Wedgeconnectorsection();
+  State<Metersection> createState() => _Metersection();
 }
 
-class _Wedgeconnectorsection extends State<Wedgeconnectorsection> {
+class _Metersection extends State<Metersection> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -34,15 +34,15 @@ class WebView extends StatefulWidget {
 
 class _WebViewState extends State<WebView> {
   List<String> title = [
-    "WLP SELF LOCKING WEDGE CONNECTOR",
-    "Elastic C-type component:",
-    "Easy to install",
+    "METER SOCKETS",
+    "Basic Specifications",
+    "Standards",
   ];
 
   List<String> description = [
-    "WLP self-locking wedge connectors consist of “C-spring” component, which is made of top-quality aluminum alloys and wedge block with exclusive patent technology, extensively applied to connections between aluminum and steel-cored stranded conductors, and connections between aluminum and copper stranded wires.WLP self-lock wedge wire connector is developed by American and Chinese local experts. It can not only guarantee the safe and reliable operation, but also maximally reduce the number of models in use because of wider range of wire sizes that single wedge connector can be applied to",
-    "Special material formula (patent) and processing techniques bring WLP “C-type” component a good elasticity, combining the design of wedge pressure technology, a “Coordinated Breathe” connecting system is created, which effectively eliminates the phenomenon of “burning clamps” resulted from thermal expansion and contraction or bad contact.",
-    "Just by knocking by hammer without shotgun, it is the fastest installation method in comparison with others, also according with mounting habits of workers. Especially under the hot-line working environment, workers’ contact time with electrified conductor will be reduced dramatically, which greatly improves the safety of workers.",
+    "A meter socket is a type of outdoors electrical socket that connects a watt-hour meter, or electrical meter, to a house. These are the meters outside houses, commercial buildings and construction sites that measure the amount of power used so the supplier knows what to charge.",
+    "100A and 200A available, Single phase 2 or 3 wire, Three phase four wires Mounting: Surface, Pole outdoor Dia cast Aluminum electrostatically applied epoxy baked gray powder finished. Conforms to ANSI 12.7",
+    "ANSI 37.42"
   ];
 
   @override
@@ -130,7 +130,7 @@ class _WebViewState extends State<WebView> {
                   SizedBox(
                     width: 300,
                     child: Image.asset(
-                      'power/meter3.jpg',
+                      'power/meter5.jpg',
                       fit: BoxFit.contain,
                     ),
                   ),
@@ -144,6 +144,16 @@ class _WebViewState extends State<WebView> {
   }
 }
 
+
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+
+
 class MobileView extends StatefulWidget {
   const MobileView({super.key});
 
@@ -153,15 +163,15 @@ class MobileView extends StatefulWidget {
 
 class _MobileViewState extends State<MobileView> {
   List<String> title = [
-    "WLP SELF LOCKING WEDGE CONNECTOR",
-    "Elastic C-type component:",
-    "Easy to install",
+    "METER SOCKETS",
+    "Basic Specifications",
+    "Standards",
   ];
 
   List<String> description = [
-    "WLP self-locking wedge connectors consist of “C-spring” component, which is made of top-quality aluminum alloys and wedge block with exclusive patent technology, extensively applied to connections between aluminum and steel-cored stranded conductors, and connections between aluminum and copper stranded wires.WLP self-lock wedge wire connector is developed by American and Chinese local experts. It can not only guarantee the safe and reliable operation, but also maximally reduce the number of models in use because of wider range of wire sizes that single wedge connector can be applied to",
-    "Special material formula (patent) and processing techniques bring WLP “C-type” component a good elasticity, combining the design of wedge pressure technology, a “Coordinated Breathe” connecting system is created, which effectively eliminates the phenomenon of “burning clamps” resulted from thermal expansion and contraction or bad contact.",
-    "Just by knocking by hammer without shotgun, it is the fastest installation method in comparison with others, also according with mounting habits of workers. Especially under the hot-line working environment, workers’ contact time with electrified conductor will be reduced dramatically, which greatly improves the safety of workers.",
+    "A meter socket is a type of outdoors electrical socket that connects a watt-hour meter, or electrical meter, to a house. These are the meters outside houses, commercial buildings and construction sites that measure the amount of power used so the supplier knows what to charge.",
+    "100A and 200A available, Single phase 2 or 3 wire, Three phase four wires Mounting: Surface, Pole outdoor Dia cast Aluminum electrostatically applied epoxy baked gray powder finished. Conforms to ANSI 12.7",
+    "ANSI 37.42"
   ];
 
   @override
@@ -185,15 +195,10 @@ class _MobileViewState extends State<MobileView> {
               ),
             ),
           ),
-          const Gap(50),
           SizedBox(
-            width: 300,
-            child: Image.asset(
-              'power/meter3.jpg',
-              fit: BoxFit.cover,
-            ),
+            width: 500,
+            child: Image.asset('power/meter5.jpg'),
           ),
-          const Gap(20),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,

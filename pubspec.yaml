@@ -119,6 +119,7 @@ flutter:
       - assets/softwarevid.mp4
       - assets/unleashingvid.mp4
       - assets/pamilyavid.mp4
+      - assets/workingbg2.jpeg
   
       
       
@@ -136,12 +137,11 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: Oswald
+      fonts:
+        - asset: fonts/Oswald-VariableFont_wght.ttf
+          style: italic
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

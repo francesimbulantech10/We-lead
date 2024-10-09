@@ -1,16 +1,18 @@
+// ignore_for_file: file_names
+
 import 'package:first_web/widgets/btn_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
-class Waterlxhsection extends StatefulWidget {
-  const Waterlxhsection({super.key});
+class Woltmansection extends StatefulWidget {
+  const Woltmansection({super.key});
 
   @override
-  State<Waterlxhsection> createState() => _Waterlxhsection();
+  State<Woltmansection> createState() => _Woltmansection();
 }
 
-class _Waterlxhsection extends State<Waterlxhsection> {
+class _Woltmansection extends State<Woltmansection> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -43,12 +45,12 @@ class _WebViewState extends State<WebView> {
   ];
 
   List<String> description = [
-    "Drinking Water Measuring Instrument (LXH-8)",
-    "LXH-8",
+    "Horizontal Woltmann Dry Dial Bulk Water Meter",
+    "LXL-50E~LXL-200E",
     "Measuring the volume of cold potable water passing through the pipeline",
-    "High sensitivity, measuring accuracy, environmental friendly material.",
+    "Big circulation capacity, low head loss; register sealed in vacuum, anti-condensation atomization proof, enables clear reading; detachable, easy maintenance.",
     "ISO4064-1~3:2005",
-    "Water Temperature – 0.1C – 59 Working Pressure – 1.0Mpa/1.6Mp Head Loss – 0.063Mp Max. Permissive Error – maximum permissible error: upper zone (Q2<Q<Q4) ,+2%;low zone (Q1<Q<Q2), + +5%",
+    "Water Temperature – 0.1C – 50C Working Pressure – 1.0Mpa/1.6Mpa Head Loss – 0.063Mpa Max. Permissive Error – maximum permissible error: upper zone (Q2<Q<Q4) ,+2%;low zone (Q1<Q<Q2), + +5%",
   ];
 
   @override
@@ -83,7 +85,7 @@ class _WebViewState extends State<WebView> {
                 children: [
                   // List of titles and descriptions
                   const SizedBox(
-                    child: Text('DRINKING WATER MEASURING INSTRUMENT (LXH-8)',
+                    child: Text('HORIZONTAL WOLTMANN DRY DIAL BULK WATER METER',
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -120,29 +122,21 @@ class _WebViewState extends State<WebView> {
                               ),
                               const Gap(50),
                             ],
-                          )
+                          ),
                         ],
                       );
                     }),
                   ),
                   SizedBox(
-                    width: 500,
+                    width: 800,
                     child: Image.asset(
-                      'water/BasicMeter4.jpg',
+                      'water/BasicMeter3.jpg',
+                      width: 800,
                       fit: BoxFit.cover,
                     ),
                   ),
-
-                  SizedBox(
-                    width: 500,
-                    child: Image.asset(
-                      'water/install4.jpg',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-
-                  // Single Button after the list
                   const Gap(50),
+                  // Single Button after the list
                   ButtonWidget(
                     title: 'Back to water',
                     action: () {
@@ -153,14 +147,13 @@ class _WebViewState extends State<WebView> {
                   ),
                 ],
               ),
-              const Gap(150),
               Column(
                 children: [
                   const Gap(300),
                   SizedBox(
-                    width: 400,
                     child: Image.asset(
-                      'water/water4.jpg',
+                      'water/water3.jpg',
+                      width: 400,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -173,6 +166,17 @@ class _WebViewState extends State<WebView> {
     );
   }
 }
+
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+
+
+
 
 class MobileView extends StatefulWidget {
   const MobileView({super.key});
@@ -192,120 +196,122 @@ class _MobileViewState extends State<MobileView> {
   ];
 
   List<String> description = [
-    "Drinking Water Measuring Instrument (LXH-8)",
-    "LXS-15E~LXS-40E",
+    "Horizontal Woltmann Dry Dial Bulk Water Meter",
+    "LXL-50E~LXL-200E",
     "Measuring the volume of cold potable water passing through the pipeline",
-    "High sensitivity, measuring accuracy, environmental friendly material.",
+    "Big circulation capacity, low head loss; register sealed in vacuum, anti-condensation atomization proof, enables clear reading; detachable, easy maintenance.",
     "ISO4064-1~3:2005",
-    "Water Temperature – 0.1C – 59 Working Pressure – 1.0Mpa/1.6Mp Head Loss – 0.063Mp Max. Permissive Error – maximum permissible error: upper zone (Q2<Q<Q4) ,+2%;low zone (Q1<Q<Q2), + +5%",
+    "Water Temperature – 0.1C – 50C Working Pressure – 1.0Mpa/1.6Mpa Head Loss – 0.063Mpa Max. Permissive Error – maximum permissible error: upper zone (Q2<Q<Q4) ,+2%;low zone (Q1<Q<Q2), + +5%",
   ];
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
     return SizedBox(
-      width: size.width,
-      child: SizedBox(
-        width: size.width,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              color: const Color(0xFF003B56),
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                child: SizedBox(
-                  width: size.width,
-                  height: 300,
-                  child: Image.asset(
-                    'water/waterbg.jpg',
-                    fit: BoxFit.cover,
-                  ),
+      width: size.width * .9,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            color: const Color(0xFF003B56),
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: SizedBox(
+                width: size.width,
+                height: 300,
+                child: Image.asset(
+                  'water/waterbg.jpg',
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
-            const Gap(100),
-            SizedBox(
-              width: size.width * .6,
-              child: Image.asset(
-                'water/water4.jpg',
-                fit: BoxFit.cover,
-              ),
+          ),
+          const Gap(40),
+          SizedBox(
+            child: Image.asset(
+              'water/water3.jpg',
+              width: 500,
+              fit: BoxFit.cover,
             ),
-            const Gap(50),
-            SizedBox(
-              width: size.width * .6,
-              child: const Text(
-                'DRINKING WATER MEASURING INSTRUMENT (LXH-8)',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign: TextAlign.center,
+          ),
+          const Gap(50),
+          SizedBox(
+            width: size.width * .7,
+            child: const Text(
+              'HORIZONTAL WOLTMANN DRY DIAL BULK WATER METER',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
               ),
+              textAlign: TextAlign.center,
             ),
-            const Gap(50),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: List.generate(title.length, (index) {
-                return Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: size.width * .8,
-                      child: Text(
-                        title[index],
-                        style: const TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF003B56),
+          ),
+          const Gap(50),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // List of titles and descriptions
+
+              const Gap(20),
+              Column(
+                children: List.generate(title.length, (index) {
+                  return Wrap(
+                    children: [
+                      SizedBox(
+                        width: size.width * .8,
+                        child: Text(
+                          title[index],
+                          style: const TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF003B56),
+                          ),
                         ),
                       ),
-                    ),
-                    const Gap(20),
-                    SizedBox(
-                      width: size.width * .8,
-                      child: Text(
-                        description[index],
+                      const Gap(20),
+                      SizedBox(
+                        width: size.width * .5,
+                        child: Text(
+                          description[index],
+                          textAlign: TextAlign.justify,
+                        ),
                       ),
+                      const Gap(50),
+                    ],
+                  );
+                }),
+              ),
+              const Gap(50),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: size.width * .5,
+                    child: Image.asset(
+                      'water/installation&weight.jpg',
+                      fit: BoxFit.contain,
                     ),
-                    const Gap(50),
-                  ],
-                );
-              }),
-            ),
-            const Gap(20),
-            SizedBox(
-              width: size.width * .8,
-              child: Image.asset(
-                'water/BasicMeter4.jpg',
-                fit: BoxFit.cover,
+                  ),
+                  const Gap(20),
+                  ButtonWidget(
+                    title: 'Back to water',
+                    action: () {
+                      String route = '/water'; // Use your desired route
+                      context.go(route);
+                    },
+                    bgColor: const Color.fromARGB(255, 255, 102, 0),
+                  ),
+                  const Gap(100),
+                ],
               ),
-            ),
 
-            SizedBox(
-              width: size.width * .8,
-              child: Image.asset(
-                'water/install4.jpg',
-                fit: BoxFit.cover,
-              ),
-            ),
-            const Gap(50),
-            // Single Button after the list
-            ButtonWidget(
-              title: 'Back to water',
-              action: () {
-                String route = '/water'; // Use your desired route
-                context.go(route);
-              },
-              bgColor: const Color.fromARGB(255, 255, 102, 0),
-            ),
-            const Gap(50),
-          ],
-        ),
+              // Single Button after the list
+            ],
+          ),
+        ],
       ),
     );
   }

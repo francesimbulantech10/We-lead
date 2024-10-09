@@ -75,7 +75,7 @@ class _WebViewState extends State<WebView> {
                 width: size.width,
                 height: 300,
                 child: Image.asset(
-                  'power/powerbg.jpg',
+                  'power/electrical-towers.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -141,6 +141,15 @@ class _WebViewState extends State<WebView> {
     );
   }
 }
+
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
+//Tablet View Tablet View Tablet View Tablet View Tablet ViewTablet View
 
 class TabletView extends StatefulWidget {
   const TabletView({super.key});
@@ -242,6 +251,14 @@ class _TabletView extends State<TabletView> {
     );
   }
 }
+
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW
 
 class MobileView extends StatefulWidget {
   const MobileView({super.key});
