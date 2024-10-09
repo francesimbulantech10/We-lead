@@ -1,23 +1,20 @@
-// ignore: file_names
-import 'package:first_web/presentation/What-we-do/E-commerce/Ecommerce.section.dart';
-
-import 'package:first_web/widgets/appbar.dart';
-import 'package:first_web/widgets/drawer.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-
-import 'package:gap/gap.dart';
+import 'package:first_web/presentation/What-we-do/Power/meter-socket/meter_connector_section.dart';
 
 import 'package:first_web/widgets/footer.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:gap/gap.dart';
+import '../../../../widgets/appbar.dart';
+import '../../../../widgets/drawer.dart';
 
-class Ecommercescreen extends StatefulWidget {
-  const Ecommercescreen({super.key});
+class Meterscreen extends StatefulWidget {
+  const Meterscreen({super.key});
 
   @override
-  State<Ecommercescreen> createState() => _Ecommercescreen();
+  State<Meterscreen> createState() => _Meterscreen();
 }
 
-class _Ecommercescreen extends State<Ecommercescreen> {
+class _Meterscreen extends State<Meterscreen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();
@@ -74,9 +71,9 @@ class _Ecommercescreen extends State<Ecommercescreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(10),
-                  Ecommercesection(),
-                  Gap(150),
+                  Gap(30),
+                  Metersection(),
+                  Gap(50),
                   FooterSection(),
                 ],
               ),

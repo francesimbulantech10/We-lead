@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
-class Transformersection extends StatefulWidget {
-  const Transformersection({super.key});
+class Hourmetersection extends StatefulWidget {
+  const Hourmetersection({super.key});
 
   @override
-  State<Transformersection> createState() => _Transformersection();
+  State<Hourmetersection> createState() => _Hourmetersection();
 }
 
-class _Transformersection extends State<Transformersection> {
+class _Hourmetersection extends State<Hourmetersection> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -34,17 +34,17 @@ class WebView extends StatefulWidget {
 
 class _WebViewState extends State<WebView> {
   List<String> title = [
-    "Single-phase Pole Mounted Transformer",
-    "Features",
-    "Basic Specifications",
-    "Standards"
+    "KWH HOUR METER",
+    "Highlights",
+    "Main Functionalities",
+    "Optional Functionalities"
   ];
 
   List<String> description = [
-    "The WLP single-phase pole-mounted distribution transformer adopts high quality silicon steel iron core, mounted on the pole, which have small size and small infrastructure investment. The transformer reduce the length of the low-voltage distribution line, reduce the loss of more than 60%. The series of tranformers are specially designed for the decentralization distribution network of servicing residential overhead distribution loads of town and countryside. They are also suitable for light and diversified power.",
-    "Quick and easy installation Excellent insulation and sealing system High reliability Low operating cost",
-    "Frequency: 50 or 60 HZ Capacity Range: 5~500kva Primary Voltage: 2.4~36KV Secondary voltage: 120~600",
-    "I EC 60076 ANSI/IEEEC.57.12.00 ANSI/IEEEC.57.12.31 ANSI/IEEE C.57.12.90"
+    "WLP-1S/2S meter is a singe phase residential meter featuring compact and cost-efficient design. It focuses on the necessary functions and offers an reliable, and accurate meter, capable of measuring kWh in single phase two wire or three wire circuit.",
+    "Instantaneous value measurement and display（kW,V, A）Ultrasonic wave for tampering-proof(optional)Battery-backup LCD displayts",
+    "Main Functionalities",
+    "Optional Functionalities"
   ];
 
   @override
@@ -103,7 +103,6 @@ class _WebViewState extends State<WebView> {
                                 width: 250,
                                 child: Text(
                                   description[index],
-                                  textAlign: TextAlign.justify,
                                 ),
                               ),
                               const Gap(50),
@@ -128,11 +127,11 @@ class _WebViewState extends State<WebView> {
               const Gap(40),
               Column(
                 children: [
-                  const Gap(20),
+                  const Gap(50),
                   SizedBox(
                     width: 300,
                     child: Image.asset(
-                      'power/meter2.jpg',
+                      'power/meter.jpg',
                       fit: BoxFit.contain,
                     ),
                   ),
@@ -146,6 +145,16 @@ class _WebViewState extends State<WebView> {
   }
 }
 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+//MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW MOBILE VIEW 
+
+
+
 class MobileView extends StatefulWidget {
   const MobileView({super.key});
 
@@ -155,17 +164,17 @@ class MobileView extends StatefulWidget {
 
 class _MobileViewState extends State<MobileView> {
   List<String> title = [
-    "Single-phase Pole Mounted Transformer",
-    "Features",
-    "Basic Specifications",
-    "Standards"
+    "KWH HOUR METER",
+    "Highlights",
+    "Main Functionalities",
+    "Optional Functionalities"
   ];
 
   List<String> description = [
-    "The WLP single-phase pole-mounted distribution transformer adopts high quality silicon steel iron core, mounted on the pole, which have small size and small infrastructure investment. The transformer reduce the length of the low-voltage distribution line, reduce the loss of more than 60%. The series of tranformers are specially designed for the decentralization distribution network of servicing residential overhead distribution loads of town and countryside. They are also suitable for light and diversified power.",
-    "Quick and easy installation Excellent insulation and sealing system High reliability Low operating cost",
-    "Frequency: 50 or 60 HZ Capacity Range: 5~500kva Primary Voltage: 2.4~36KV Secondary voltage: 120~600",
-    "I EC 60076 ANSI/IEEEC.57.12.00 ANSI/IEEEC.57.12.31 ANSI/IEEE C.57.12.90"
+    "WLP-1S/2S meter is a singe phase residential meter featuring compact and cost-efficient design. It focuses on the necessary functions and offers an reliable, and accurate meter, capable of measuring kWh in single phase two wire or three wire circuit.",
+    "Instantaneous value measurement and display（kW,V, A）Ultrasonic wave for tampering-proof(optional)Battery-backup LCD displayts",
+    "Main Functionalities",
+    "Optional Functionalities"
   ];
 
   @override
@@ -189,15 +198,10 @@ class _MobileViewState extends State<MobileView> {
               ),
             ),
           ),
-          const Gap(50),
           SizedBox(
-            width: 300,
-            child: Image.asset(
-              'power/meter2.jpg',
-              fit: BoxFit.cover,
-            ),
+            width: 500,
+            child: Image.asset('power/meter.jpg'),
           ),
-          const Gap(20),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -206,7 +210,7 @@ class _MobileViewState extends State<MobileView> {
               Column(
                 children: List.generate(title.length, (index) {
                   return Wrap(
-                    runSpacing: 20,
+                    spacing: 50,
                     children: [
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -223,15 +227,14 @@ class _MobileViewState extends State<MobileView> {
                               ),
                             ),
                           ),
-                          const Gap(10),
+                          const Gap(50),
                           SizedBox(
                             width: 250,
                             child: Text(
                               description[index],
-                              textAlign: TextAlign.justify,
                             ),
                           ),
-                          const Gap(10),
+                          const Gap(50),
                         ],
                       ),
                     ],

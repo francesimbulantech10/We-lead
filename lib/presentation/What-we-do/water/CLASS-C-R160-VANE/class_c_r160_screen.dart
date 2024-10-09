@@ -1,4 +1,4 @@
-import 'package:first_web/presentation/What-we-do/water/DRINKING-WATER-(LXH-8)/Water-LXH-8-section.dart';
+import 'package:first_web/presentation/What-we-do/water/CLASS-C-R160-VANE/class_c_r160_section.dart';
 
 import 'package:first_web/widgets/footer.dart';
 import 'package:flutter/material.dart';
@@ -7,14 +7,14 @@ import 'package:gap/gap.dart';
 import '../../../../widgets/appbar.dart';
 import '../../../../widgets/drawer.dart';
 
-class Waterlxhscreen extends StatefulWidget {
-  const Waterlxhscreen({super.key});
+class R160screen extends StatefulWidget {
+  const R160screen({super.key});
 
   @override
-  State<Waterlxhscreen> createState() => _Waterlxhscreen();
+  State<R160screen> createState() => _R160screen();
 }
 
-class _Waterlxhscreen extends State<Waterlxhscreen> {
+class _R160screen extends State<R160screen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();
@@ -71,9 +71,8 @@ class _Waterlxhscreen extends State<Waterlxhscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                
-                  Waterlxhsection(),
-                  Gap(150),
+                  R160section(),
+                  Gap(20),
                   FooterSection(),
                 ],
               ),

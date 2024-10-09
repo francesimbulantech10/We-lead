@@ -5,12 +5,13 @@ class FadeInText extends StatefulWidget {
   final String text;
   final TextStyle style;
   final Duration duration;
-
+  final TextAlign? textAlign;
   const FadeInText({
     Key? key,
     required this.text,
     required this.style,
-    this.duration = const Duration(seconds: 1),
+    this.textAlign,
+    this.duration = const Duration(seconds: 1), 
   }) : super(key: key);
 
   @override
@@ -60,6 +61,7 @@ class _FadeInTextState extends State<FadeInText>
         child: Text(
           widget.text,
           style: widget.style,
+          textAlign: TextAlign.center,
         ),
       ),
     );

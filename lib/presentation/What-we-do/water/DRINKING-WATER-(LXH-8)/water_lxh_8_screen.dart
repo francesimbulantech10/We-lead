@@ -1,4 +1,4 @@
-import 'package:first_web/presentation/What-we-do/Power/meter-socket/Meter-connector-section.dart';
+import 'package:first_web/presentation/What-we-do/water/DRINKING-WATER-(LXH-8)/water_lxh_8_section.dart';
 
 import 'package:first_web/widgets/footer.dart';
 import 'package:flutter/material.dart';
@@ -7,14 +7,14 @@ import 'package:gap/gap.dart';
 import '../../../../widgets/appbar.dart';
 import '../../../../widgets/drawer.dart';
 
-class Meterscreen extends StatefulWidget {
-  const Meterscreen({super.key});
+class Waterlxhscreen extends StatefulWidget {
+  const Waterlxhscreen({super.key});
 
   @override
-  State<Meterscreen> createState() => _Meterscreen();
+  State<Waterlxhscreen> createState() => _Waterlxhscreen();
 }
 
-class _Meterscreen extends State<Meterscreen> {
+class _Waterlxhscreen extends State<Waterlxhscreen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();
@@ -71,9 +71,9 @@ class _Meterscreen extends State<Meterscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(30),
-                  Metersection(),
-                  Gap(50),
+                
+                  Waterlxhsection(),
+                  Gap(150),
                   FooterSection(),
                 ],
               ),

@@ -1,4 +1,4 @@
-import 'package:first_web/presentation/What-we-do/Power/Fuse-connector/Fuse-connector-section.dart';
+import 'package:first_web/presentation/What-we-do/Power/Locking-wedge-connector/wedge_connector_section.dart';
 
 import 'package:first_web/widgets/footer.dart';
 import 'package:flutter/material.dart';
@@ -7,14 +7,14 @@ import 'package:gap/gap.dart';
 import '../../../../widgets/appbar.dart';
 import '../../../../widgets/drawer.dart';
 
-class Fusescreen extends StatefulWidget {
-  const Fusescreen({super.key});
+class Wedgeconnectorscreen extends StatefulWidget {
+  const Wedgeconnectorscreen({super.key});
 
   @override
-  State<Fusescreen> createState() => _Fusescreen();
+  State<Wedgeconnectorscreen> createState() => _Wedgeconnectorscreen();
 }
 
-class _Fusescreen extends State<Fusescreen> {
+class _Wedgeconnectorscreen extends State<Wedgeconnectorscreen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();
@@ -71,8 +71,9 @@ class _Fusescreen extends State<Fusescreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Fusesection(),
                   Gap(50),
+                  Wedgeconnectorsection(),
+                  Gap(200),
                   FooterSection(),
                 ],
               ),

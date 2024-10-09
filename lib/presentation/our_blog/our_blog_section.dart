@@ -1,5 +1,6 @@
 // ignore: file_names
 
+import 'package:first_web/widgets/fadeintextwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
@@ -86,81 +87,88 @@ class _WebViewState extends State<WebView> {
           ),
           const Gap(50),
           SizedBox(
-            width: size.width,
-            child: Column(
+            width: size.width * .9,
+            child: Wrap(
+              alignment: WrapAlignment.center,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              spacing: 20,
+              runSpacing: 30,
               children: List.generate(img.length, (index) {
-                return Column(
-                  children: [
-                    Wrap(
-                      // mainAxisAlignment: MainAxisAlignment.center,
-                      // crossAxisAlignment: CrossAxisAlignment.center,
-                      alignment: WrapAlignment.center,
-                      crossAxisAlignment: WrapCrossAlignment.center,
-                      spacing: 50,
-                      runSpacing: 50,
-                      children: [
-                        Stack(
-                          alignment: Alignment.center,
+                return SizedBox(
+                  width: size.width * .15, // Controls the width of each card
+                  child: Stack(
+                    alignment: Alignment.bottomLeft,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          context.go(link[index]);
+                        },
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(8),
+                          child: Image.asset(
+                            img[index],
+                            height: 600,
+                            width: size.width / 4,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: 500,
+                        width: size.width / 3,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              Colors.transparent,
+                              Colors.black.withOpacity(0.7),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            InkWell(
-                              child: SizedBox(
-                                height: 300,
-                                width: 800,
-                                child: Image.asset(
-                                  img[index],
-                                  fit: BoxFit.cover,
-                                ),
+                            FadeInText(
+                              text: title[index],
+                              style: const TextStyle(
+                                fontSize: 24,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Oswald',
                               ),
                             ),
-                            SizedBox(
-                              width: 800,
-                              // padding:
-                              //     const EdgeInsets.only(left: 130, right: 130),
-                              child: Text(
-                                title[index],
-                                style: const TextStyle(
-                                  fontSize: 24,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
+                            const Gap(10),
+                            FadeInText(
+                              text: desc[index],
+                              style: const TextStyle(
+                                fontSize: 16,
+                                color: Colors.white70,
+                              ),
+                            ),
+                            const Gap(20),
+                            TextButton(
+                              onPressed: () {
+                                context.go(link[index]);
+                              },
+                              child: const Text(
+                                'Read more',
+                                style: TextStyle(
+                                  color: Colors.orange,
+                                  fontSize: 16,
                                 ),
-                                maxLines: 8,
-                                textAlign: TextAlign.center,
                               ),
                             ),
                           ],
                         ),
-                        // Text("data",),
-                        // AutoSizeInterText(text: title[index], fontSize: 56,fw: FontWeight.bold,),
-                        SizedBox(
-                          width: 380,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                desc[index], // Replace with your desired index
-                                textAlign: TextAlign.start,
-                                style: const TextStyle(
-                                    fontSize: 18, color: Colors.black),
-                                maxLines: 3,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                              const Gap(20),
-                              ButtonWidget(
-                                title: 'See more',
-                                action: () {
-                                  context.go(link[index]);
-                                  //  context.go("/empower");
-                                },
-                                bgColor: const Color.fromARGB(255, 255, 102, 0),
-                              ),
-                              // Column(
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    const Gap(50),
-                  ],
+                      ),
+                    ],
+                  ),
                 );
               }),
             ),

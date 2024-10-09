@@ -1,5 +1,4 @@
-import 'package:first_web/presentation/What-we-do/water/CLASS-C-R160-VANE/Class-c-R160-section.dart';
-
+import 'package:first_web/presentation/What-we-do/Power/Hour-meter/hour_meter_section.dart';
 import 'package:first_web/widgets/footer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -7,14 +6,16 @@ import 'package:gap/gap.dart';
 import '../../../../widgets/appbar.dart';
 import '../../../../widgets/drawer.dart';
 
-class R160screen extends StatefulWidget {
-  const R160screen({super.key});
+// ignore: camel_case_types
+class hourmeterscreen extends StatefulWidget {
+  const hourmeterscreen({super.key});
 
   @override
-  State<R160screen> createState() => _R160screen();
+  State<hourmeterscreen> createState() => _hourmeterscreen();
 }
 
-class _R160screen extends State<R160screen> {
+// ignore: camel_case_types
+class _hourmeterscreen extends State<hourmeterscreen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();
@@ -71,8 +72,9 @@ class _R160screen extends State<R160screen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  R160section(),
-                  Gap(20),
+                  Gap(30),
+                  Hourmetersection(),
+                  Gap(200),
                   FooterSection(),
                 ],
               ),

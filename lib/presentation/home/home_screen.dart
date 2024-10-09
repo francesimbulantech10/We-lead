@@ -32,11 +32,14 @@ class _HomeScreenState extends State<HomeScreen> {
       endDrawerEnableOpenDragGesture: false,
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
-          preferredSize: Size(size.height , 75,), child: const SampleAppBar()),
+          preferredSize: Size(
+            size.height,
+            75,
+          ),
+          child: const SampleAppBar()),
       endDrawer: const AppBarDrawer(),
       body: Stack(
         children: [
-        
           SingleChildScrollView(
             controller: scrollController,
             child: Column(
@@ -50,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       //Purpose of this is still display the class in home section
-                      
+
                       HomeSection(),
                       Gap(50),
                       FooterSection(),

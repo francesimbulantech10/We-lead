@@ -1,20 +1,21 @@
-import 'package:first_web/presentation/What-we-do/Power/Locking-wedge-connector/Wedge-connector-section.dart';
-
-import 'package:first_web/widgets/footer.dart';
+import 'package:first_web/presentation/What-we-do/Sourcing/sourcing_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:gap/gap.dart';
-import '../../../../widgets/appbar.dart';
-import '../../../../widgets/drawer.dart';
 
-class Wedgeconnectorscreen extends StatefulWidget {
-  const Wedgeconnectorscreen({super.key});
+import 'package:gap/gap.dart';
+
+import '../../../widgets/appbar.dart';
+import '../../../widgets/drawer.dart';
+import '../../../widgets/footer.dart';
+
+class Sourcingscreen extends StatefulWidget {
+  const Sourcingscreen({super.key});
 
   @override
-  State<Wedgeconnectorscreen> createState() => _Wedgeconnectorscreen();
+  State<Sourcingscreen> createState() => _Sourcingscreen();
 }
 
-class _Wedgeconnectorscreen extends State<Wedgeconnectorscreen> {
+class _Sourcingscreen extends State<Sourcingscreen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();
@@ -71,8 +72,7 @@ class _Wedgeconnectorscreen extends State<Wedgeconnectorscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(50),
-                  Wedgeconnectorsection(),
+                  Sourcingcesection(),
                   Gap(200),
                   FooterSection(),
                 ],

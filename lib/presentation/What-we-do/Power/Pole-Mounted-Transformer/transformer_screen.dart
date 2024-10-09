@@ -1,4 +1,4 @@
-import 'package:first_web/presentation/What-we-do/Power/Pole-Mounted-Transformer/Transformer-section.dart';
+import 'package:first_web/presentation/What-we-do/Power/Pole-Mounted-Transformer/transformer_section.dart';
 import 'package:first_web/widgets/footer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';

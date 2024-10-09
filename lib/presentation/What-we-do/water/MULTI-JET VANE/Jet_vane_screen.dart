@@ -1,5 +1,5 @@
+import 'package:first_web/presentation/What-we-do/water/MULTI-JET%20VANE/Jet_vane_section.dart';
 
-import 'package:first_web/presentation/What-we-do/Power/Hour-meter/hour-meter-section.dart';
 import 'package:first_web/widgets/footer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -7,17 +7,14 @@ import 'package:gap/gap.dart';
 import '../../../../widgets/appbar.dart';
 import '../../../../widgets/drawer.dart';
 
-
-// ignore: camel_case_types
-class hourmeterscreen extends StatefulWidget {
-  const hourmeterscreen({super.key});
+class Jetvanescreen extends StatefulWidget {
+  const Jetvanescreen({super.key});
 
   @override
-  State<hourmeterscreen> createState() => _hourmeterscreen();
+  State<Jetvanescreen> createState() => _Jetvanescreen();
 }
 
-// ignore: camel_case_types
-class _hourmeterscreen extends State<hourmeterscreen> {
+class _Jetvanescreen extends State<Jetvanescreen> {
   bool showAppbar = false;
   late final ScrollController scrollController;
   final itemKey = GlobalKey();
@@ -74,9 +71,8 @@ class _hourmeterscreen extends State<hourmeterscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Gap(30),
-                  Hourmetersection(),
-                  Gap(200),
+                  Jetvanesection(),
+                  Gap(50),
                   FooterSection(),
                 ],
               ),

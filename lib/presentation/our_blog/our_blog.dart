@@ -1,9 +1,8 @@
-
 import 'package:first_web/presentation/our_blog/our_blog_section.dart';
 import 'package:flutter/material.dart';
 
-
 import 'package:first_web/widgets/footer.dart';
+import 'package:gap/gap.dart';
 
 import '../../widgets/appbar.dart';
 import '../../widgets/drawer.dart';
@@ -48,9 +47,8 @@ class _OurBlogscreen extends State<OurBlogscreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                 
                   OurBlogSection(),
-                  
+                  Gap(300),
                   FooterSection(),
                 ],
               ),
